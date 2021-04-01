@@ -1,0 +1,134 @@
+wruslan@HPEliteBk8470p-ubstudio-20:~$ date
+Wed 31 Mar 2021 03:31:13 PM +08
+
+wruslan@HPEliteBk8470p-ubstudio-20:~$ uname -a
+Linux HPEliteBk8470p-ubstudio-20 5.8.0-48-lowlatency #54~20.04.1-Ubuntu SMP PREEMPT 
+Sat Mar 20 23:24:50 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBk8470p-ubstudio-20:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBk8470p-ubstudio-20:~$ 
+
+===========================================================
+GNU Octave, version 6.2.0
+Copyright (C) 2021 The Octave Project Developers.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at https://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit https://www.octave.org/get-involved.html
+
+Read https://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+INITIAL PACKAGE LIST FOR OCTAVE 6.2.0
+===========================================================
+>> pkg list
+Package Name         | Version | Installation directory
+---------------------+---------+-----------------------
+            arduino  |   0.6.0 | /home/wruslan/octave/arduino-0.6.0
+fuzzy-logic-toolkit  |   0.4.6 | /home/wruslan/octave/fuzzy-logic-toolkit-0.4.6
+            general  |   2.1.1 | /home/wruslan/octave/general-2.1.1
+              image  |  2.12.0 | /home/wruslan/octave/image-2.12.0
+ instrument-control  |   0.7.0 | /home/wruslan/octave/instrument-control-0.7.0
+                 io  |   2.6.3 | /home/wruslan/octave/io-2.6.3
+                nan  |   3.5.3 | /home/wruslan/octave/nan-3.5.3
+              nurbs  |   1.4.3 | /home/wruslan/octave/nurbs-1.4.3
+              optim  |   1.6.1 | /home/wruslan/octave/optim-1.6.1
+            splines  |   1.3.4 | /home/wruslan/octave/splines-1.3.4
+         statistics  |   1.4.2 | /home/wruslan/octave/statistics-1.4.2
+             struct  |  1.0.17 | /home/wruslan/octave/struct-1.0.17
+           symbolic  |   2.9.0 | /home/wruslan/octave/symbolic-2.9.0
+             zeromq  |   1.5.2 | /home/wruslan/octave/zeromq-1.5.2
+>>
+>>
+VERY LIMITED PACKAGES. ONLY FROM LOCAL DIRECTORY
+===========================================================
+IMPT: TO INSTALL THE FOLLOWING UPDATES FROM INSIDE OCTAVE 6.2.0:
+
+wruslan@HPEliteBk8470p-ubstudio-20:~$ ls -al /usr/share/octave/packages/
+total 168
+drwxr-xr-x 36 root root  4096 Mar 31 10:37 .
+drwxr-xr-x  6 root root  4096 Mar 31 09:40 ..
+drwxr-xr-x  4 root root  4096 Mar 31 10:36 communications-1.2.2  ==> DONE
+drwxr-xr-x  9 root root 12288 Mar 31 10:36 control-3.2.0         ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:36 database-2.4.4        ==> DONE
+drwxr-xr-x  4 root root  4096 Mar 31 10:36 dataframe-1.2.0       ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:36 data-smoothing-1.3.0  ==> DONE
+drwxr-xr-x 12 root root  4096 Mar 31 10:36 divand-1.1.2          ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:36 gsl-2.1.1             ==> DONE
+drwxr-xr-x  6 root root  4096 Mar 31 10:36 interval-3.2.0        ==> DONE
+drwxr-xr-x  5 root root  4096 Mar 31 10:36 linear-algebra-2.2.3  ==> DONE
+drwxr-xr-x 21 root root  4096 Mar 31 10:36 ltfat-2.3.1           ==> 
+drwxr-xr-x  4 root root  4096 Mar 31 10:36 mapping-1.2.1         ==> DONE
+drwxr-xr-x  5 root root  4096 Mar 31 10:36 miscellaneous-1.3.0   ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:36 missing-functions-1.0 ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:36 mvn-1.1.0             ==> DONE
+drwxr-xr-x  8 root root  4096 Mar 31 10:37 ncarray-1.0.4         ==> DONE
+drwxr-xr-x  4 root root  4096 Mar 31 10:37 netcdf-1.0.12         ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:37 optiminterp-0.3.6     ==> DONE
+drwxr-xr-x  4 root root  4096 Mar 31 10:37 parallel-3.1.3        ==> DONE
+drwxr-xr-x  4 root root 12288 Mar 31 10:36 signal-1.4.1          ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:37 sockets-1.2.0         ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:37 sparsersb-1.0.6       ==> DONE
+drwxr-xr-x  3 root root  4096 Mar 31 10:37 specfun-1.1.0         ==>  
+drwxr-xr-x  4 root root  4096 Mar 31 10:37 strings-1.2.0         ==>  
+drwxr-xr-x  3 root root  4096 Mar 31 10:37 tsa-4.6.2             ==> DONE
+
+wruslan@HPEliteBk8470p-ubstudio-20:~$ 
+>> pkg list
+warning: load_path: /home/wruslan/octave/specfun-1.1.0/x86_64-pc-linux-gnu-api-v55: No such file or directory
+warning: load-path: update failed for '/home/wruslan/octave/specfun-1.1.0/x86_64-pc-linux-gnu-api-v55', removing from path
+Package Name         | Version | Installation directory
+---------------------+---------+-----------------------
+            arduino  |   0.6.0 | /home/wruslan/octave/arduino-0.6.0
+     communications  |   1.2.2 | /home/wruslan/octave/communications-1.2.2
+            control  |   3.2.0 | /home/wruslan/octave/control-3.2.0
+     data-smoothing  |   1.3.0 | /home/wruslan/octave/data-smoothing-1.3.0
+           database  |   2.4.4 | /home/wruslan/octave/database-2.4.4
+          dataframe  |   1.2.0 | /home/wruslan/octave/dataframe-1.2.0
+             divand  |   1.1.2 | /home/wruslan/octave/divand-1.1.2
+fuzzy-logic-toolkit  |   0.4.6 | /home/wruslan/octave/fuzzy-logic-toolkit-0.4.6
+            general  |   2.1.1 | /home/wruslan/octave/general-2.1.1
+           geometry  |   4.0.0 | /home/wruslan/octave/geometry-4.0.0
+                gsl  |   2.1.1 | /home/wruslan/octave/gsl-2.1.1
+              image  |  2.12.0 | /home/wruslan/octave/image-2.12.0
+ instrument-control  |   0.7.0 | /home/wruslan/octave/instrument-control-0.7.0
+           interval  |   3.2.0 | /home/wruslan/octave/interval-3.2.0
+                 io  |   2.6.3 | /home/wruslan/octave/io-2.6.3
+     linear-algebra  |   2.2.3 | /home/wruslan/octave/linear-algebra-2.2.3
+            mapping  |   1.4.1 | /home/wruslan/octave/mapping-1.4.1
+            matgeom  |   1.2.2 | /home/wruslan/octave/matgeom-1.2.2
+      miscellaneous  |   1.3.0 | /home/wruslan/octave/miscellaneous-1.3.0
+  missing-functions  |   1.0.2 | /home/wruslan/octave/missing-functions-1.0.2
+                mvn  |   1.1.0 | /home/wruslan/octave/mvn-1.1.0
+                nan  |   3.5.3 | /home/wruslan/octave/nan-3.5.3
+            ncarray  |   1.0.4 | /home/wruslan/octave/ncarray-1.0.4
+             netcdf  |  1.0.14 | /home/wruslan/octave/netcdf-1.0.14
+              nurbs  |   1.4.3 | /home/wruslan/octave/nurbs-1.4.3
+              optim  |   1.6.1 | /home/wruslan/octave/optim-1.6.1
+        optiminterp  |   0.3.6 | /home/wruslan/octave/optiminterp-0.3.6
+           parallel  |   4.0.1 | /home/wruslan/octave/parallel-4.0.1
+             signal  |   1.4.1 | /home/wruslan/octave/signal-1.4.1
+            sockets  |   1.2.1 | /home/wruslan/octave/sockets-1.2.1
+          sparsersb  |   1.0.8 | /home/wruslan/octave/sparsersb-1.0.8
+            splines  |   1.3.4 | /home/wruslan/octave/splines-1.3.4
+         statistics  |   1.4.2 | /home/wruslan/octave/statistics-1.4.2
+             struct  |  1.0.17 | /home/wruslan/octave/struct-1.0.17
+           symbolic  |   2.9.0 | /home/wruslan/octave/symbolic-2.9.0
+                tsa  |   4.6.2 | /home/wruslan/octave/tsa-4.6.2
+             zeromq  |   1.5.2 | /home/wruslan/octave/zeromq-1.5.2
+>>
+===========================================================
+ALHAMDULILLAH #TIMES WRY.
+===========================================================
+

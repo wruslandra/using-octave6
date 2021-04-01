@@ -1,0 +1,174 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Fri 19 Mar 2021 12:46:21 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:    core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.2 LTS
+Release:        20.04
+Codename:       focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+OCTAVE GUI
+===========================================================
+GNU Octave, version 6.2.0
+Copyright (C) 2021 The Octave Project Developers.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-pc-linux-gnu".
+
+Additional information about Octave is available at https://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit https://www.octave.org/get-involved.html
+
+Read https://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+===========================================================
+>> exp(i*pi)
+ans = -1.0000e+00 + 1.2246e-16i
+>> pi
+ans = 3.1416
+>> exp(1)
+ans = 2.7183
+>>
+>> eps
+ans = 2.2204e-16
+>>
+===========================================================
+>> A = [ 1, 1, 2; 3, 5, 8; 13, 21, 34 ]
+A =
+
+    1    1    2
+    3    5    8
+   13   21   34
+
+>>
+>> B = rand (3, 2);
+>> B
+B =
+
+   0.3915   0.5241
+   0.9402   0.9108
+   0.7089   0.8350
+
+>> 2 * A
+ans =
+
+    2    2    4
+    6   10   16
+   26   42   68
+
+>> A * B
+ans =
+
+    2.7495    3.1048
+   11.5466   12.8057
+   48.9358   54.3275
+
+>>
+>> A' * A
+ans =
+
+    179    289    468
+    289    467    756
+    468    756   1224
+
+>>
+===========================================================
+
+>> function xdot = f (x, t)
+  r = 0.25;
+  k = 1.4;
+  a = 1.5;
+  b = 0.16;
+  c = 0.9;
+  d = 0.8;
+  xdot(1) = r*x(1)*(1 - x(1)/k) - a*x(1)*x(2)/(1 + b*x(1));
+  xdot(2) = c*a*x(1)*x(2)/(1 + b*x(1)) - d*x(2);
+endfunction
+>>
+>> x0 = [1; 2];
+>> t = linspace (0, 50, 200)';
+>>
+
+===========================================================
+
+octave:1> A = [2, 0; 0, 2];
+octave:2> A
+A =
+
+   2   0
+   0   2
+
+octave:3> 
+octave:3> b = [2; 1]
+b =
+
+   2
+   1
+
+octave:4> x = A \ b
+x =
+
+   1.00000
+   0.50000
+
+octave:5> A * x
+ans =
+
+   2
+   1
+
+octave:6> A' * A
+ans =
+
+   4   0
+   0   4
+
+octave:7> 
+
+===========================================================
+OCTAVE VER 5.2.0
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /usr/local/bin | grep oct
+lrwxrwxrwx  1 root root      15 May  3  2020 mkoctfile -> mkoctfile-5.2.0
+-rwxr-xr-x  1 root root 5596304 May  3  2020 mkoctfile-5.2.0
+lrwxrwxrwx  1 root root      12 May  3  2020 octave -> octave-5.2.0
+-rwxr-xr-x  1 root root  256640 May  3  2020 octave-5.2.0
+lrwxrwxrwx  1 root root      16 May  3  2020 octave-cli -> octave-cli-5.2.0
+-rwxr-xr-x  1 root root  159480 May  3  2020 octave-cli-5.2.0
+lrwxrwxrwx  1 root root      19 May  3  2020 octave-config -> octave-config-5.2.0
+-rwxr-xr-x  1 root root 1027800 May  3  2020 octave-config-5.2.0
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+OCTAVE VER 6.2.0
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /var/lib/flatpak/app/org.octave.Octave/x86_64/stable/3102845b8cfb12d5b8ede397e4779ff594dd19054ae105b86706978f42ebd76d/files/bin/ | grep oct
+lrwxrwxrwx 1 root root       15 Mar  5 18:17 mkoctfile -> mkoctfile-6.2.0
+-rwxr-xr-x 2 root root   108672 Mar  5 18:15 mkoctfile-6.2.0
+lrwxrwxrwx 1 root root       12 Mar  5 18:17 octave -> octave-6.2.0
+-rwxr-xr-x 2 root root    34944 Mar  5 18:15 octave-6.2.0
+lrwxrwxrwx 1 root root       16 Mar  5 18:17 octave-cli -> octave-cli-6.2.0
+-rwxr-xr-x 2 root root    18560 Mar  5 18:15 octave-cli-6.2.0
+lrwxrwxrwx 1 root root       19 Mar  5 18:17 octave-config -> octave-config-6.2.0
+-rwxr-xr-x 2 root root    34944 Mar  5 18:15 octave-config-6.2.0
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+
+
+
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY
+===========================================================
+

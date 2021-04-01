@@ -1,0 +1,15 @@
+signalR = sin( 2 * pi / 64 * [0 : 63] );
+plot( signalR );
+fftSignalR = fft( signalR );
+plot( real( fftSignalR ) );
+plot( imag( fftSignalR ) );
+
+octave:12> signalR = sin( 2 * pi / 64 * [0 : 63] );
+octave:13> plot( signalR );
+octave:14> fftSignalR = fft( signalR );
+octave:15> plot( real( fftSignalR ) );
+octave:16> plot( imag( fftSignalR ) );
+octave:17> 
+
+
+

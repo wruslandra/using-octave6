@@ -1,0 +1,1276 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Mon 22 Mar 2021 10:30:23 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+SUMMARY OF STEPS
+===========================================================
+(1) Extract source code
+(2) ./configure
+(3) make             ... NOTE: Takes a long time.
+(4) make check
+(5) sudo make install
+(6) check compiled libraries
+(7) check compiled binaries
+(8) test compiled binaries
+
+===========================================================
+(2) CONFIGURE
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ ./configure
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc -O2
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -O2 accepts -g... yes
+checking for gcc -O2 option to enable C11 features... none needed
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking dependency style of gcc -O2... gcc3
+checking how to run the C preprocessor... gcc -O2 -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+defining octlibdir to be ${libdir}/octave/${version}
+defining archlibdir to be ${libexecdir}/octave/${version}/exec/${canonical_host_type}
+defining localarchlibdir to be ${libexecdir}/octave/site/exec/${canonical_host_type}
+defining localapiarchlibdir to be ${libexecdir}/octave/${api_version}/site/exec/${canonical_host_type}
+defining localverarchlibdir to be ${libexecdir}/octave/${version}/site/exec/${canonical_host_type}
+defining octfiledir to be ${libdir}/octave/${version}/oct/${canonical_host_type}
+defining localoctfiledir to be ${libdir}/octave/site/oct/${canonical_host_type}
+defining localapioctfiledir to be ${libdir}/octave/site/oct/${api_version}/${canonical_host_type}
+defining localveroctfiledir to be ${libdir}/octave/${version}/site/oct/${canonical_host_type}
+defining octincludedir to be ${includedir}/octave-${version}/octave
+defining fcnfiledir to be ${datadir}/octave/${version}/m
+defining localfcnfiledir to be ${datadir}/octave/site/m
+defining localapifcnfiledir to be ${datadir}/octave/site/${api_version}/m
+defining localverfcnfiledir to be ${datadir}/octave/${version}/site/m
+defining octetcdir to be ${datadir}/octave/${version}/etc
+defining octlocaledir to be ${datadir}/octave/${version}/locale
+defining doc_cache_file to be ${octetcdir}/doc-cache
+defining octtestsdir to be ${octetcdir}/tests
+defining texi_macros_file to be ${octetcdir}/macros.texi
+defining imagedir to be ${datadir}/octave/${version}/imagelib
+defining octdatadir to be ${datadir}/octave/${version}/data
+defining octdocdir to be ${datadir}/octave/${version}/doc
+defining octfontsdir to be ${datadir}/octave/${version}/fonts
+defining startupfiledir to be ${fcnfiledir}/startup
+defining localstartupfiledir to be ${localfcnfiledir}/startup
+defining man1dir to be ${mandir}/man1
+defining man1ext to be .1
+defining infofile to be ${infodir}/octave.info
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for gawk... (cached) gawk
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for gfind... no
+checking for find... find
+checking for a usable sed... /bin/sed
+checking for perl... perl
+checking for gperf... gperf
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+defining LFLAGS to be -I
+checking for bison... bison -y
+checking syntax of bison api.prefix (or name-prefix) declaration... api brace
+checking for makeinfo... makeinfo
+checking for makeinfo support for @sortas command... yes
+checking for texi2dvi... texi2dvi
+checking for texi2pdf... texi2pdf
+checking for options to make reproducible archives with GNU tar... --owner=0 --group=0 --numeric-owner --sort=name
+checking whether ln -s works... yes
+checking for gs... gs
+checking for gnuplot... gnuplot
+checking for less... less
+checking for python... python
+checking for icotool... icotool
+checking for rsvg-convert... rsvg-convert
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -O2 accepts -g... yes
+checking for g++ -O2 option to enable C++11 features... none needed
+checking dependency style of g++ -O2... gcc3
+checking how to run the C++ preprocessor... g++ -O2 -E
+checking how to run the C preprocessor... gcc -O2 -E
+checking whether gcc -O2 needs -traditional... no
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking C++ compiler version number... 9.3.0
+checking whether stl_algo.h is broken... no
+checking C compiler version number... 9.3.0
+configure: defining __NO_MATH_INLINES avoids buggy GNU libc exp function
+checking for sin in -lm... yes
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether gfortran accepts -g... yes
+checking whether a usable Fortran compiler was found... yes
+checking how to get verbose linking output from gfortran... -v
+checking for Fortran 77 libraries of gfortran...  -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -lgfortran -lm -lquadmath
+checking for dummy main to link with Fortran 77 libraries... none
+checking for Fortran 77 name-mangling scheme... lower case, underscore, no extra underscore
+configure: defining FFLAGS to be -g -O2
+configure: defining FPICFLAG to be -fPIC
+configure: defining CPICFLAG to be -fPIC
+configure: defining CXXPICFLAG to be -fPIC
+configure: defining SH_LDFLAGS to be -shared
+configure: defining DL_LDFLAGS to be -shared
+configure: defining MKOCTFILE_DL_LDFLAGS to be -shared -Wl,-Bsymbolic
+configure: defining NO_OCT_FILE_STRIP to be false
+configure: defining TEMPLATE_AR to be ar
+configure: defining TEMPLATE_ARFLAGS to be cr
+configure: defining EXTERNAL_DLL_DEFS to be 
+configure: defining OCTAVE_DLL_DEFS to be 
+configure: defining OCTINTERP_DLL_DEFS to be 
+configure: defining OCTGUI_DLL_DEFS to be 
+configure: defining OCTGRAPHICS_DLL_DEFS to be 
+configure: defining library_path_var to be LD_LIBRARY_PATH
+checking size of void *... 8
+checking if compiler needs -Werror to reject unknown flags... no
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking whether pthread stack size does not account for thread-local storage... yes
+checking for OpenMP flag of C compiler... -fopenmp
+checking for OpenMP flag of C++ compiler... -fopenmp
+checking omp.h usability... yes
+checking omp.h presence... yes
+checking for omp.h... yes
+checking for omp_get_num_threads... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc -O2... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... (cached) ranlib
+checking command to parse /usr/bin/nm -B output from gcc -O2 object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc -O2 supports -fno-rtti -fno-exceptions... no
+checking for gcc -O2 option to produce PIC... -fPIC -DPIC
+checking if gcc -O2 PIC flag -fPIC -DPIC works... yes
+checking if gcc -O2 static flag -static works... yes
+checking if gcc -O2 supports -c -o file.o... yes
+checking if gcc -O2 supports -c -o file.o... (cached) yes
+checking whether the gcc -O2 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -O2 -E
+checking for ld used by g++ -O2... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ -O2 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ -O2 option to produce PIC... -fPIC -DPIC
+checking if g++ -O2 PIC flag -fPIC -DPIC works... yes
+checking if g++ -O2 static flag -static works... yes
+checking if g++ -O2 supports -c -o file.o... yes
+checking if g++ -O2 supports -c -o file.o... (cached) yes
+checking whether the g++ -O2 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for gfortran option to produce PIC... -fPIC
+checking if gfortran PIC flag -fPIC works... yes
+checking if gfortran static flag -static works... yes
+checking if gfortran supports -c -o file.o... yes
+checking if gfortran supports -c -o file.o... (cached) yes
+checking whether the gfortran linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking if sgemm_ is being linked in already... no
+checking for sgemm_ in -lopenblas... yes
+checking whether LSAME is called correctly from Fortran... yes
+checking whether ISAMAX is called correctly from Fortran... yes
+checking whether SDOT is called correctly from Fortran... yes
+checking whether DDOT is called correctly from Fortran... yes
+checking whether CDOTU is called correctly from Fortran... yes
+checking whether ZDOTU is called correctly from Fortran... yes
+checking BLAS library integer size... 4
+checking for cheev_... yes
+checking default size of Fortran INTEGER... 4
+checking whether gfortran accepts -ffloat-store... yes
+setting F77_FLOAT_STORE_FLAG to -ffloat-store
+checking whether gfortran accepts -std=legacy... yes
+adding -std=legacy to FFLAGS
+checking whether g++ -O2 accepts -rdynamic... yes
+configure: defining CROSS_TOOL_PREFIX to be 
+configure: defining MKOCTFILE_AR to be ar
+configure: defining MKOCTFILE_CC to be gcc -O2
+configure: defining MKOCTFILE_CXX to be g++ -O2
+configure: defining MKOCTFILE_F77 to be gfortran
+configure: defining MKOCTFILE_RANLIB to be ranlib
+checking whether C++ supports dynamic auto arrays... yes
+checking for IEEE 754 data format... yes
+checking whether bit_and, bit_or, bit_xor are defined in the C++ library... yes
+checking whether complex class can set components independently... yes
+checking whether complex class can reference components independently... no
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for C/C++ restrict keyword... __restrict
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for btowc... yes
+checking for canonicalize_file_name... yes
+checking for realpath... yes
+checking for readlinkat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fchdir... yes
+checking for fcntl... yes
+checking for symlink... yes
+checking for fdopendir... yes
+checking for mempcpy... yes
+checking for fnmatch... yes
+checking for mbsrtowcs... yes
+checking for fpurge... no
+checking for __fpurge... yes
+checking for __freading... yes
+checking for fstatat... yes
+checking for ftruncate... yes
+checking for getdtablesize... yes
+checking for getlogin_r... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for getrandom... yes
+checking for getrusage... yes
+checking for gettimeofday... yes
+checking for glob... yes
+checking for glob_pattern_p... yes
+checking for getpwnam_r... yes
+checking for isblank... yes
+checking for link... yes
+checking for uselocale... yes
+checking for newlocale... yes
+checking for duplocale... yes
+checking for freelocale... yes
+checking for lstat... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mprotect... yes
+checking for mkostemp... yes
+checking for mkostemps... yes
+checking for openat... yes
+checking for pipe... yes
+checking for readlink... yes
+checking for secure_getenv... yes
+checking for getuid... yes
+checking for geteuid... yes
+checking for getgid... yes
+checking for getegid... yes
+checking for setenv... yes
+checking for sigaction... yes
+checking for sigaltstack... yes
+checking for siginterrupt... yes
+checking for snprintf... yes
+checking for strptime... yes
+checking for localtime_r... yes
+checking for timegm... yes
+checking for vasnprintf... no
+checking for iswcntrl... yes
+checking for wmempcpy... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... none
+checking whether // is distinct from /... no
+checking whether realpath works... yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for dirent.h... yes
+checking for fnmatch.h... yes
+checking for sys/stat.h... (cached) yes
+checking for netdb.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/time.h... yes
+checking for glob.h... yes
+checking for threads.h... yes
+checking for iconv.h... yes
+checking for limits.h... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for langinfo.h... yes
+checking for xlocale.h... no
+checking for math.h... yes
+checking for sys/mman.h... yes
+checking for sys/select.h... yes
+checking for strings.h... (cached) yes
+checking for sys/random.h... yes
+checking for sys/resource.h... yes
+checking for sys/times.h... yes
+checking for sys/uio.h... yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... yes
+checking for features.h... yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking whether <sys/socket.h> is self-contained... yes
+checking for shutdown... yes
+checking whether <sys/socket.h> defines the SHUT_* macros... yes
+checking for struct sockaddr_storage... yes
+checking for sa_family_t... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking for inline... inline
+checking whether linux/if_alg.h has struct sockaddr_alg.... yes
+checking whether byte ordering is bigendian... no
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... yes
+checking whether fchdir is declared... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking for st_dm_mode in struct stat... no
+checking whether strmode is declared... no
+checking for mbstate_t... yes
+checking whether frexp() can be used without linking with libm... yes
+checking whether alarm is declared... yes
+checking whether frexp works... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether fflush works on input streams... no
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether ftello is declared... yes
+checking for ftello... yes
+checking whether ftello works... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking whether getcwd is declared... yes
+checking whether getdtablesize is declared... yes
+checking whether getlogin_r is declared... yes
+checking whether getlogin is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... yes
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking for ld... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib
+checking for iconv... yes
+checking for working iconv... yes
+checking how to link with libiconv... /usr/local/lib/libiconv.so -Wl,-rpath -Wl,/usr/local/lib
+checking whether iconv is compatible with its POSIX signature... yes
+checking whether limits.h has LLONG_MAX, WORD_BIT, ULLONG_WIDTH etc.... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking for wchar_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether locale.h defines locale_t... yes
+checking for LC_MESSAGES... yes
+checking whether uselocale works... yes
+checking for fake locale system (OpenBSD)... no
+checking for Solaris 11.4 locale system... no
+checking for getlocalename_l... no
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking whether imported symbols can be declared weak... yes
+checking for multithread API to use... posix
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking for GNU libc compatible malloc... yes
+checking for a traditional japanese locale... none
+checking for a french Unicode locale... none
+checking for a transitional chinese locale... none
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether time_t is signed... yes
+checking for working mktime... yes
+checking whether <sys/select.h> is self-contained... yes
+checking for library containing setsockopt... none needed
+checking whether select supports a 0 argument... yes
+checking whether select detects invalid fds... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_zone... yes
+checking for struct tm.tm_gmtoff... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking for sigset_t... yes
+checking whether setenv is declared... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking for uid_t in sys/types.h... yes
+checking whether snprintf returns a byte count as in C99... yes
+checking whether snprintf is declared... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether strdup is declared... yes
+checking whether strerror(0) succeeds... yes
+checking whether strnlen is declared... yes
+checking whether strsignal is declared... yes
+checking for struct timespec in <time.h>... yes
+checking whether unsetenv is declared... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking for alloca as a compiler built-in... yes
+checking whether btowc(0) is correct... yes
+checking whether btowc(EOF) is correct... guessing yes
+checking for __builtin_expect... yes
+checking byteswap.h usability... yes
+checking byteswap.h presence... yes
+checking for byteswap.h... yes
+checking whether this system supports file names of any length... no
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for closedir... yes
+checking for d_ino member in directory struct... yes
+checking for d_type member in directory struct... yes
+checking for dirfd... yes
+checking whether dirfd is declared... yes
+checking whether dirfd is a macro... no
+checking whether // is distinct from /... (cached) no
+checking whether dup works... yes
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether fdopendir is declared... yes
+checking whether fdopendir works... yes
+checking whether fflush works on input streams... (cached) no
+checking for flexible array member... yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking for working POSIX fnmatch... yes
+checking whether fpurge is declared... no
+checking whether frexpf can be used without linking with libm... yes
+checking whether frexpf works... yes
+checking for fseeko... (cached) yes
+checking whether fflush works on input streams... (cached) no
+checking for _fseeki64... no
+checking whether fstatat (..., 0) works... yes
+checking for ftello... (cached) yes
+checking whether ftello works... (cached) yes
+checking whether getcwd handles long file names properly... yes
+checking for getpagesize... yes
+checking whether getcwd succeeds when 4k < cwd_length < 16k... yes
+checking whether getdtablesize works... yes
+checking for gethostname... yes
+checking for HOST_NAME_MAX... yes
+checking whether getlogin_r works with small buffers... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking whether getrandom is compatible with its GNU+BSD signature... yes
+checking for gettimeofday with POSIX signature... yes
+checking for GNU glob interface version 1 or 2... yes
+checking whether glob lists broken symlinks... yes
+checking whether the compiler generally respects inline... yes
+checking whether isnan(double) can be used without linking with libm... yes
+checking whether langinfo.h defines CODESET... yes
+checking whether langinfo.h defines T_FMT_AMPM... yes
+checking whether langinfo.h defines ALTMON_1... yes
+checking whether langinfo.h defines ERA... yes
+checking whether langinfo.h defines YESEXPR... yes
+checking whether the compiler supports the __inline keyword... yes
+checking whether link obeys POSIX... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking for pthread_rwlock_t... yes
+checking whether pthread_rwlock_rdlock prefers a writer to a reader... no
+checking whether lseek detects pipes... yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... guessing yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc stores incomplete characters... guessing no
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether mbsrtowcs works... guessing yes
+checking for mbtowc... yes
+checking for mempcpy... (cached) yes
+checking for memrchr... yes
+checking whether mkdir handles trailing slash... yes
+checking whether mkdir handles trailing dot... yes
+checking for mkfifo... yes
+checking whether mkfifo rejects trailing slashes... yes
+checking for __mktime_internal... no
+checking for library containing nanosleep... none required
+checking for working nanosleep... no (mishandles large arguments)
+checking for sys/pstat.h... no
+checking for sys/sysmp.h... no
+checking for sys/param.h... (cached) yes
+checking for sys/sysctl.h... yes
+checking for sched_getaffinity... yes
+checking for sched_getaffinity_np... no
+checking for pstat_getdynamic... no
+checking for sysmp... no
+checking for sysctl... yes
+checking for glibc compatible sched_getaffinity... yes
+checking whether open recognizes a trailing slash... yes
+checking for opendir... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for putenv compatible with GNU and SVID... yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for readdir... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking for rewinddir... yes
+checking whether rmdir works... yes
+checking whether select supports a 0 argument... (cached) yes
+checking whether select detects invalid fds... (cached) yes
+checking whether setenv validates arguments... yes
+checking whether setlocale supports the C locale... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) yes
+checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+checking for struct sigaction.sa_sigaction... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking for sigprocmask... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking for socklen_t... yes
+checking for ssize_t... yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for working stdalign.h... yes
+checking for good max_align_t... (cached) yes
+checking whether NULL can be used in arbitrary expressions... (cached) yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... yes
+checking for working strerror function... yes
+checking for working strnlen... yes
+checking for strsignal... yes
+checking whether strsignal always returns a string... yes
+checking whether symlink handles trailing slash correctly... yes
+checking for nlink_t... (cached) yes
+checking for struct tms... yes
+checking for struct utsname... yes
+checking sys/single_threaded.h usability... no
+checking sys/single_threaded.h presence... no
+checking for sys/single_threaded.h... no
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking whether localtime works even near extrema... yes
+checking for timezone_t... no
+checking whether tmpfile works... yes
+checking for uname... yes
+checking whether unlink honors trailing slashes... yes
+checking whether unlink of a parent directory fails as it should... guessing yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for ptrdiff_t... yes
+checking for vasprintf... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for wmemchr... yes
+checking for stdint.h... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking floatingpoint.h usability... no
+checking floatingpoint.h presence... no
+checking for floatingpoint.h... no
+checking fpu_control.h usability... yes
+checking fpu_control.h presence... yes
+checking for fpu_control.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking ieeefp.h usability... no
+checking ieeefp.h presence... no
+checking for ieeefp.h... no
+checking for pthread.h... (cached) yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking whether stdatomic.h can be compiled... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking termio.h usability... yes
+checking termio.h presence... yes
+checking for termio.h... yes
+checking sgtty.h usability... yes
+checking sgtty.h presence... yes
+checking for sgtty.h... yes
+checking conio.h usability... no
+checking conio.h presence... no
+checking for conio.h... no
+checking for int64_t... yes
+checking for mode_t... (cached) yes
+checking for off_t... yes
+checking for pid_t... (cached) yes
+checking for size_t... (cached) yes
+checking for ssize_t... yes
+checking for uid_t in sys/types.h... (cached) yes
+checking for uint64_t... yes
+checking for dev_t... yes
+checking for ino_t... yes
+checking for ptrdiff_t... (cached) yes
+checking for long long int... yes
+checking for unsigned long long int... yes
+checking size of long double... 16
+checking for struct stat.st_blksize... yes
+checking for struct stat.st_blocks... yes
+checking for struct stat.st_rdev... yes
+checking for struct group.gr_passwd... no
+checking for struct tm.tm_zone... (cached) yes
+checking whether g++ -O2 allows overload of char, int8_t, and uint8_t... yes
+checking whether MIPS processor is using non-standard NaN encoding... no
+checking for ctermid... yes
+checking for dup2... yes
+checking for endgrent... yes
+checking for endpwent... yes
+checking for execvp... yes
+checking for fork... yes
+checking for getegid... (cached) yes
+checking for geteuid... (cached) yes
+checking for getgid... (cached) yes
+checking for getgrent... yes
+checking for getgrgid... yes
+checking for getgrnam... yes
+checking for getpgrp... yes
+checking for getpid... yes
+checking for getppid... yes
+checking for getpwent... yes
+checking for getpwuid... yes
+checking for getuid... (cached) yes
+checking for isascii... yes
+checking for kill... yes
+checking for lgamma_r... yes
+checking for lgammaf_r... yes
+checking for realpath... (cached) yes
+checking for resolvepath... no
+checking for select... yes
+checking for setgrent... yes
+checking for setpwent... yes
+checking for setsid... yes
+checking for siglongjmp... yes
+checking for strsignal... (cached) yes
+checking for tcgetattr... yes
+checking for tcsetattr... yes
+checking for toascii... yes
+checking for umask... yes
+checking for waitpid... yes
+checking for _getch... no
+checking for _kbhit... no
+checking for MATH DEFINES in math.h... yes
+checking for getrusage... (cached) yes
+checking for getpwnam... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking whether closedir returns void... no
+checking for struct exception in math.h... no
+checking whether sys_siglist is declared... yes
+checking libqhull/libqhull.h usability... yes
+checking libqhull/libqhull.h presence... yes
+checking for libqhull/libqhull.h... yes
+checking for qh_qhull in -lqhull... yes
+checking for qh_version in -lqhull... yes
+checking whether the qhull library works... yes
+checking pcre.h usability... yes
+checking pcre.h presence... yes
+checking for pcre.h... yes
+checking for pcre_compile in -lpcre... yes
+checking whether PCRE library was compiled with UTF support... yes
+checking for library containing tputs... -lncurses
+checking for rl_set_keyboard_input_timeout in -lreadline... yes
+checking for library containing tputs... (cached) -lncurses
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking for gzclearerr in -lz... yes
+checking bzlib.h usability... yes
+checking bzlib.h presence... yes
+checking for bzlib.h... yes
+checking for BZ2_bzCompressInit in -lbz2... yes
+checking hdf5.h usability... yes
+checking hdf5.h presence... yes
+checking for hdf5.h... yes
+checking for H5Gget_num_objs in -lhdf5... yes
+checking whether HDF5 library has enforced version 1.6 API... no
+checking fftw3.h usability... yes
+checking fftw3.h presence... yes
+checking for fftw3.h... yes
+checking for fftw_plan_dft_1d in -lfftw3... yes
+checking for fftw3.h... (cached) yes
+checking for fftwf_plan_dft_1d in -lfftw3f... yes
+checking for fftw3 multi-threading support... -lfftw3_threads
+checking for fftw3f multi-threading support... -lfftw3f_threads
+checking glpk/glpk.h usability... no
+checking glpk/glpk.h presence... no
+checking for glpk/glpk.h... no
+checking glpk.h usability... yes
+checking glpk.h presence... yes
+checking for glpk.h... yes
+checking for glp_simplex in -lglpk... yes
+checking whether the glpk library has glp_interior(glp_prob*, glp_iptcp*)... yes
+checking curl/curl.h usability... yes
+checking curl/curl.h presence... yes
+checking for curl/curl.h... yes
+checking for curl_easy_escape in -lcurl... yes
+checking for CURLOPT_DIRLISTONLY in curl/curl.h... yes
+checking sndfile.h usability... yes
+checking sndfile.h presence... yes
+checking for sndfile.h... yes
+checking for sf_open in -lsndfile... yes
+checking whether sndfile library is modern enough... yes
+checking portaudio.h usability... yes
+checking portaudio.h presence... yes
+checking for portaudio.h... yes
+checking for Pa_GetDeviceCount in -lportaudio -lasound -lm -lpthread... yes
+checking Magick++.h usability... yes
+checking Magick++.h presence... yes
+checking for Magick++.h... yes
+checking for Magick::ColorRGB in Magick++.h... yes
+checking for X... libraries , headers 
+checking for XrmInitialize in -lX11... yes
+checking whether /usr/bin/ld -m elf_x86_64 accepts -framework Carbon... no
+checking whether /usr/bin/ld -m elf_x86_64 accepts -framework OpenGL... no
+checking for GL/gl.h... yes
+checking for GL/glu.h... yes
+checking for GL/glext.h... yes
+checking for OpenGL/glext.h... no
+checking for glEnable in -lGL... yes
+checking for freetype2... yes
+checking for FreeType2 version >= 9.03... yes
+checking for FT_Reference_Face... yes
+checking fontconfig.h usability... no
+checking fontconfig.h presence... no
+checking for fontconfig.h... no
+checking fontconfig/fontconfig.h usability... yes
+checking fontconfig/fontconfig.h presence... yes
+checking for fontconfig/fontconfig.h... yes
+checking for FcInit in -lfontconfig -lfreetype... yes
+checking gl2ps.h usability... yes
+checking gl2ps.h presence... yes
+checking for gl2ps.h... yes
+checking for gl2psLineJoin... yes
+checking Qt version 5... checking for Qt5Core Qt5Gui Qt5Network Qt5PrintSupport Qt5Help Qt5Xml... yes
+checking for qtchooser... qtchooser
+checking for moc-qt5... no
+checking for moc... moc
+checking for uic-qt5... no
+checking for uic... uic
+checking for rcc-qt5... no
+checking for rcc... rcc
+checking for lrelease-qt5... no
+checking for lrelease... lrelease
+checking for qcollectiongenerator-qt5... no
+checking for qcollectiongenerator... qcollectiongenerator
+checking for qhelpgenerator-qt5... no
+checking for qhelpgenerator... qhelpgenerator
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking for library containing openpty... -lutil
+checking for chmod... yes
+checking for chown... yes
+checking for ftruncate... (cached) yes
+checking for mmap... (cached) yes
+checking for munmap... yes
+checking for QAbstractItemModel::beginResetModel in <QAbstractItemModel>... yes
+checking QStandardPaths usability... yes
+checking QStandardPaths presence... yes
+checking for QStandardPaths... yes
+checking for QComboBox::setCurrentText... yes
+checking for QFontDatabase::systemFont function... yes
+checking for QFontMetrics::horizontalAdvance function... yes
+checking for QGuiApplication::setDesktopFileName... yes
+checking for QHeaderView::setSectionResizeMode... yes
+checking for QHeaderView::setSectionsClickable... yes
+checking for QHeaderView::setSectionsMovable... yes
+checking for QHelpSearchQueryWidget::searchInput... yes
+checking for new QHelpIndexWidget API... no
+checking for qInstallMessageHandler... yes
+checking for QLineEdit::setPlaceholderText in <QLinedEdit>... yes
+checking for QList<T>::QList (iterator, iterator) constructor... no
+checking for QMouseEvent::localPos... yes
+checking whether QObject::findChildren accepts Qt::FindChildOptions... yes
+checking for QMainWindow::resizeDocks in <QMainWindow>... yes
+checking for QScreen::devicePixelRatio in <QScreen>... yes
+checking for QTabWidget::setMovable in <QTabWidget>... yes
+checking whether Qt message handler accepts QMessageLogContext... yes
+checking for QHelpEngine::documentsForIdentifier in <QHelpEngine>... no
+checking for QWheelEvent::angleDelta in <QWheelEvent>... yes
+checking for QWheelEvent::position in <QWheelEvent>... no
+checking for QFont::ForceIntegerMetrics in <QFont>... yes
+checking for QFont::Monospace in <QFont>... yes
+checking whether QVariant::canConvert accepts QMetaType::Type argument... yes
+checking for QGuiApplication... yes
+checking for QRegion iterators and related functions... yes
+checking for Qt::SplitBehavior enum... no
+checking QOpenGLWidget usability... yes
+checking QOpenGLWidget presence... yes
+checking for QOpenGLWidget... yes
+checking QGLWidget usability... yes
+checking QGLWidget presence... yes
+checking for QGLWidget... yes
+checking QGLFunctions_1_1 usability... no
+checking QGLFunctions_1_1 presence... no
+checking for QGLFunctions_1_1... no
+checking whether Qt works with OpenGL and GLU... yes
+checking QOffscreenSurface usability... yes
+checking QOffscreenSurface presence... yes
+checking for QOffscreenSurface... yes
+checking whether Qt supports full offscreen OpenGL rendering... yes
+checking for the QScintilla library for Qt 5... -lqscintilla2_qt5
+checking whether QScintilla has version 2.6.0 or later... yes
+checking Qsci/qscilexeroctave.h usability... yes
+checking Qsci/qscilexeroctave.h presence... yes
+checking for Qsci/qscilexeroctave.h... yes
+checking Qsci/qscilexermatlab.h usability... yes
+checking Qsci/qscilexermatlab.h presence... yes
+checking for Qsci/qscilexermatlab.h... yes
+checking for fltk-config... /usr/bin/fltk-config
+checking for OpenGL support in FLTK... yes
+checking for sqr1up in -lqrupdate... yes
+checking for slup1up in -lqrupdate... yes
+checking for SuiteSparse_time in -lsuitesparseconfig... yes
+checking suitesparse/amd.h usability... yes
+checking suitesparse/amd.h presence... yes
+checking for suitesparse/amd.h... yes
+checking for amd_postorder in -lamd... yes
+checking suitesparse/camd.h usability... yes
+checking suitesparse/camd.h presence... yes
+checking for suitesparse/camd.h... yes
+checking for camd_postorder in -lcamd... yes
+checking suitesparse/colamd.h usability... yes
+checking suitesparse/colamd.h presence... yes
+checking for suitesparse/colamd.h... yes
+checking for colamd in -lcolamd... yes
+checking suitesparse/ccolamd.h usability... yes
+checking suitesparse/ccolamd.h presence... yes
+checking for suitesparse/ccolamd.h... yes
+checking for ccolamd in -lccolamd... yes
+checking suitesparse/cholmod.h usability... yes
+checking suitesparse/cholmod.h presence... yes
+checking for suitesparse/cholmod.h... yes
+checking for cholmod_l_start in -lcholmod... yes
+checking suitesparse/cs.h usability... yes
+checking suitesparse/cs.h presence... yes
+checking for suitesparse/cs.h... yes
+checking for cs_dl_sqr in -lcxsparse... yes
+checking whether CXSparse is version 2.2 or later... yes
+checking suitesparse/umfpack.h usability... yes
+checking suitesparse/umfpack.h presence... yes
+checking for suitesparse/umfpack.h... yes
+checking for umfpack_zl_get_determinant in -lumfpack... yes
+checking suitesparse/klu.h usability... yes
+checking suitesparse/klu.h presence... yes
+checking for suitesparse/klu.h... yes
+checking for klu_solve in -lklu... yes
+checking for UMFPACK separate complex matrix and rhs split... yes
+checking nvector/nvector_serial.h usability... yes
+checking nvector/nvector_serial.h presence... yes
+checking for nvector/nvector_serial.h... yes
+checking for N_VNew_Serial in -lsundials_nvecserial... yes
+checking ida/ida.h usability... yes
+checking ida/ida.h presence... yes
+checking for ida/ida.h... yes
+checking for IDAInit in -lsundials_ida... yes
+checking for IDASetJacFn... no
+checking for IDASetLinearSolver... no
+checking for SUNLinSol_Dense... no
+checking ida/ida_direct.h usability... yes
+checking ida/ida_direct.h presence... yes
+checking for ida/ida_direct.h... yes
+checking ida_direct.h usability... no
+checking ida_direct.h presence... no
+checking for ida_direct.h... no
+checking for IDADlsSetJacFn... yes
+checking for IDADlsSetLinearSolver... yes
+checking for SUNDenseLinearSolver... yes
+checking whether SUNDIALS API provides the necessary functions... yes
+checking whether SUNDIALS IDA is configured with double precision realtype... yes
+checking sunlinsol/sunlinsol_dense.h usability... yes
+checking sunlinsol/sunlinsol_dense.h presence... yes
+checking for sunlinsol/sunlinsol_dense.h... yes
+checking klu.h usability... no
+checking klu.h presence... no
+checking for klu.h... no
+checking klu/klu.h usability... no
+checking klu/klu.h presence... no
+checking for klu/klu.h... no
+checking for suitesparse/klu.h... (cached) yes
+checking ufsparse/klu.h usability... no
+checking ufsparse/klu.h presence... no
+checking for ufsparse/klu.h... no
+checking for sunlinsol/sunlinsol_klu.h... no
+checking for SUNKLU in -lsundials_sunlinsolklu... yes
+checking for SUNLinSol_KLU... no
+checking for SUNKLU... yes
+checking whether compiling a program that calls SUNKLU works... yes
+configure: WARNING: SUNDIALS IDA library not configured with SUNLINSOL_KLU or sunlinksol_klu.h is not usable.  The solvers ode15i and ode15s will not support the sparse Jacobian feature.
+checking for dseupd in -larpack... yes
+checking whether the arpack library works... yes
+checking whether the arpack library is free of bugs... yes
+checking for java... /usr/lib/jvm/jdk-13.0.2/bin/java
+checking for javac... /usr/lib/jvm/jdk-13.0.2/bin/javac
+checking for jar... /usr/lib/jvm/jdk-13.0.2/bin/jar
+checking for Java version... 13.0.2
+checking for libjvm.so... /usr/lib/jvm/jdk-13.0.2/lib/server
+checking for include file <jni.h>... /usr/lib/jvm/jdk-13.0.2/include
+checking whether gcc -O2 accepts -Wall... yes
+adding -Wall to WARN_CFLAGS
+checking whether gcc -O2 accepts -W... yes
+adding -W to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wshadow... yes
+adding -Wshadow to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wformat... yes
+adding -Wformat to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wpointer-arith... yes
+adding -Wpointer-arith to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wmissing-prototypes... yes
+adding -Wmissing-prototypes to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wstrict-prototypes... yes
+adding -Wstrict-prototypes to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wwrite-strings... yes
+adding -Wwrite-strings to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wcast-align... yes
+adding -Wcast-align to WARN_CFLAGS
+checking whether gcc -O2 accepts -Wcast-qual... yes
+adding -Wcast-qual to WARN_CFLAGS
+checking whether g++ -O2 accepts -Wall... yes
+adding -Wall to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -W... yes
+adding -W to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wshadow... yes
+adding -Wshadow to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Woverloaded-virtual... yes
+adding -Woverloaded-virtual to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wold-style-cast... yes
+adding -Wold-style-cast to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wformat... yes
+adding -Wformat to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wpointer-arith... yes
+adding -Wpointer-arith to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wwrite-strings... yes
+adding -Wwrite-strings to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wcast-align... yes
+adding -Wcast-align to WARN_CXXFLAGS
+checking whether g++ -O2 accepts -Wcast-qual... yes
+adding -Wcast-qual to WARN_CXXFLAGS
+checking for #pragma GCC diagnostic push/pop/ignore... yes
+checking whether gcc -O2 accepts -Wimplicit-fallthrough... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating build-aux/check-subst-vars.sh
+config.status: creating doc/doxyhtml/Doxyfile
+config.status: creating libgnu/Makefile
+config.status: creating liboctave/octave.pc
+config.status: creating libinterp/octinterp.pc
+config.status: creating oct-conf-post.h-tmp
+config.status: creating libgui/mk-default-qt-settings.sh-tmp
+config.status: creating liboctave/external/mk-f77-def.sh-tmp
+config.status: creating liboctave/mk-version-h.sh-tmp
+config.status: creating libinterp/corefcn/mk-mxarray-h.sh-tmp
+config.status: creating build-aux/subst-config-vals.sh-tmp
+config.status: creating build-aux/subst-cross-config-vals.sh-tmp
+config.status: creating build-aux/subst-script-vals.sh-tmp
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing oct-conf-post.h commands
+config.status: executing libgui/mk-default-qt-settings.sh commands
+config.status: executing liboctave/external/mk-f77-def.sh commands
+config.status: executing liboctave/mk-version-h.sh commands
+config.status: executing libinterp/corefcn/mk-mxarray-h.sh commands
+config.status: executing build-aux/subst-config-vals.sh commands
+config.status: executing build-aux/subst-cross-config-vals.sh commands
+config.status: executing build-aux/subst-script-vals.sh commands
+configure:
+
+Octave is now configured for x86_64-pc-linux-gnu
+
+  Source directory:              .
+  Installation prefix:           /usr/local
+  C compiler:                    gcc -O2  -pthread -fopenmp  -Wall -W -Wshadow -Wformat -Wpointer-arith -Wmissing-prototypes -Wstrict-prototypes -Wwrite-strings -Wcast-align -Wcast-qual -g -O2
+  C++ compiler:                  g++ -O2  -pthread -fopenmp  -Wall -W -Wshadow -Woverloaded-virtual -Wold-style-cast -Wformat -Wpointer-arith -Wwrite-strings -Wcast-align -Wcast-qual -g -O2
+  Fortran compiler:              gfortran -g -O2 -std=legacy
+  Fortran libraries:              -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -lgfortran -lm -lquadmath
+  Lex libraries:                 
+  LIBS:                          -lutil  -lm 
+  LDFLAGS:                       
+  Extra LDFLAGS:                 
+
+  AMD CPPFLAGS:                  
+  AMD LDFLAGS:                   
+  AMD libraries:                 -lamd
+  ARPACK CPPFLAGS:               -I/usr/include/arpack
+  ARPACK LDFLAGS:                
+  ARPACK libraries:              -larpack
+  BLAS libraries:                -lopenblas
+  BZ2 CPPFLAGS:                  
+  BZ2 LDFLAGS:                   
+  BZ2 libraries:                 -lbz2
+  CAMD CPPFLAGS:                 
+  CAMD LDFLAGS:                  
+  CAMD libraries:                -lcamd
+  CARBON libraries:              
+  CCOLAMD CPPFLAGS:              
+  CCOLAMD LDFLAGS:               
+  CCOLAMD libraries:             -lccolamd
+  CHOLMOD CPPFLAGS:              
+  CHOLMOD LDFLAGS:               
+  CHOLMOD libraries:             -lcholmod
+  COLAMD CPPFLAGS:               
+  COLAMD LDFLAGS:                
+  COLAMD libraries:              -lcolamd
+  CURL CPPFLAGS:                 
+  CURL LDFLAGS:                  
+  CURL libraries:                -lcurl
+  CXSPARSE CPPFLAGS:             
+  CXSPARSE LDFLAGS:              
+  CXSPARSE libraries:            -lcxsparse
+  DL libraries:                  -ldl
+  FFTW3 CPPFLAGS:                
+  FFTW3 LDFLAGS:                 
+  FFTW3 libraries:               -lfftw3_threads -lfftw3
+  FFTW3F CPPFLAGS:               
+  FFTW3F LDFLAGS:                
+  FFTW3F libraries:              -lfftw3f_threads -lfftw3f
+  FLTK CPPFLAGS:                 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/libpng16
+  FLTK LDFLAGS:                  
+  FLTK libraries:                -lfltk_gl -lfltk -lX11
+  fontconfig CPPFLAGS:           -I/usr/local/include/freetype2 -I/usr/include/uuid -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+  fontconfig libraries:          -lfontconfig -lfreetype
+  FreeType2 CPPFLAGS:            -I/usr/local/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+  FreeType2 libraries:           -L/usr/local/lib -lfreetype
+  GLPK CPPFLAGS:                 
+  GLPK LDFLAGS:                  
+  GLPK libraries:                -lglpk
+  HDF5 CPPFLAGS:                 -I/usr/include/hdf5/serial
+  HDF5 LDFLAGS:                  -L/usr/lib/x86_64-linux-gnu/hdf5/serial
+  HDF5 libraries:                -lhdf5
+  Java home:                     /usr/lib/jvm/jdk-13.0.2
+  Java JVM path:                 /usr/lib/jvm/jdk-13.0.2/lib/server
+  Java CPPFLAGS:                 -I/usr/lib/jvm/jdk-13.0.2/include -I/usr/lib/jvm/jdk-13.0.2/include/linux
+  Java libraries:                
+  KLU CPPFLAGS:                  
+  KLU LDFLAGS:                   
+  KLU libraries:                 -lklu
+  LAPACK libraries:              
+  LLVM CPPFLAGS:                 
+  LLVM LDFLAGS:                  
+  LLVM libraries:                
+  Magick++ CPPFLAGS:             -I/usr/include/GraphicsMagick
+  Magick++ LDFLAGS:              
+  Magick++ libraries:            -lGraphicsMagick++ -lGraphicsMagick
+  OpenGL libraries:              -lGL -lGLU
+  PCRE CPPFLAGS:                 
+  PCRE LDFLAGS:                  
+  PCRE libraries:                -lpcre
+  PortAudio CPPFLAGS:            
+  PortAudio LDFLAGS:             
+  PortAudio libraries:           -lportaudio -lasound -lm -lpthread
+  PTHREAD flags:                 -pthread
+  PTHREAD libraries:             
+  QHULL CPPFLAGS:                
+  QHULL LDFLAGS:                 
+  QHULL libraries:               -lqhull
+  QRUPDATE CPPFLAGS:             
+  QRUPDATE LDFLAGS:              
+  QRUPDATE libraries:            -lqrupdate
+  Qt CPPFLAGS:                   -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtHelp -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtSql -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtXml -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5
+  Qt LDFLAGS:                    
+  Qt GUI libraries:              -lQt5Network -lQt5PrintSupport -lQt5Help -lQt5Widgets -lQt5Gui -lQt5Sql -lQt5Xml -lQt5Core -lqscintilla2_qt5
+  Qt OpenGL libraries:           -lQt5OpenGL -lQt5Widgets -lQt5Gui -lQt5Core
+  Qt moc:                        moc -qt=5
+  Qt uic:                        uic -qt=5
+  Qt rcc:                        rcc -qt=5
+  Qt lrelease:                   lrelease -qt=5
+  Qt qcollectiongenerator:       qcollectiongenerator -qt=5
+  Qt qhelpgenerator:             qhelpgenerator -qt=5
+  READLINE libraries:            -lreadline
+  Sndfile CPPFLAGS:              
+  Sndfile LDFLAGS:               
+  Sndfile libraries:             -lsndfile
+  SuiteSparse config libraries:  -lsuitesparseconfig
+  SUNDIALS IDA CPPFLAGS:         
+  SUNDIALS IDA LDFLAGS:          
+  SUNDIALS IDA libraries:        -lsundials_ida
+  SUNDIALS NVECTOR CPPFLAGS:     
+  SUNDIALS NVECTOR LDFLAGS:      
+  SUNDIALS NVECTOR libraries:    -lsundials_nvecserial
+  SUNLINSOL KLU CPPFLAGS:        
+  SUNLINSOL KLU LDFLAGS:         
+  SUNLINSOL KLU libraries:       -lsundials_sunlinsolklu
+  TERM libraries:                -lncurses
+  UMFPACK CPPFLAGS:              
+  UMFPACK LDFLAGS:               
+  UMFPACK libraries:             -lumfpack
+  X11 include flags:             
+  X11 libraries:                 -lX11
+  Z CPPFLAGS:                    
+  Z LDFLAGS:                     
+  Z libraries:                   -lz
+
+  Default pager:                 less
+  gnuplot:                       gnuplot
+
+  Build Octave Qt GUI:                  yes (version: 5)
+  JIT compiler for loops:               no
+  Build Java interface:                 yes
+  Build static libraries:               no
+  Build shared libraries:               yes
+  Dynamic Linking API:                  dlopen
+  Include support for GNU readline:     yes
+  Use push parser in command line REPL: yes
+  64-bit array dims and indexing:       yes
+  64-bit BLAS array dims and indexing:  no
+  OpenMP SMP multithreading:            yes
+  Truncate intermediate FP results:     yes
+  Build cross tools:                    no
+  Build docs:                           yes
+
+configure: WARNING: SUNDIALS IDA library not configured with SUNLINSOL_KLU or sunlinksol_klu.h is not usable.  The solvers ode15i and ode15s will not support the sparse Jacobian feature.
+configure: 
+configure: NOTE: Libraries or auxiliary programs may be skipped if they are not found
+configure: NOTE: OR if they are missing required features on your system.
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+
+

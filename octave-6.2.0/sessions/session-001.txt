@@ -1,0 +1,57 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Fri 19 Mar 2021 12:46:21 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:    core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.2 LTS
+Release:        20.04
+Codename:       focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/wruslandra/using-octave$ ls -al
+total 36
+drwxrwxr-x 8 wruslan wruslan 4096 Mar 19 02:35 .
+drwxrwxr-x 9 wruslan wruslan 4096 Mar 19 01:32 ..
+drwxrwxr-x 2 wruslan wruslan 4096 Mar 19 02:30 docs
+drwxrwxr-x 4 wruslan wruslan 4096 Mar 19 02:40 figures
+drwxrwxr-x 2 wruslan wruslan 4096 Mar 19 02:35 files
+drwxrwxr-x 8 wruslan wruslan 4096 Mar 19 00:35 .git
+drwxrwxr-x 2 wruslan wruslan 4096 Mar 19 02:42 modules-list
+-rw-rw-r-- 1 wruslan wruslan   51 Mar 19 00:35 README.md
+drwxrwxr-x 2 wruslan wruslan 4096 Mar 19 02:42 sessions
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/wruslandra/using-octave$ 
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/wruslandra/using-octave$ tree ./
+./
+├── docs
+│   └── octave-6.2.0-reference-manual.pdf
+├── figures
+│   ├── jpg
+│   │   ├── Octave-6.2.0-2021-03-19-02-31-27.jpg
+│   │   └── Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.jpg
+│   └── png
+│       ├── Octave-6.2.0-2021-03-19-02-31-27.png
+│       └── Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.png
+├── files
+│   ├── bismillah.ngc
+│   ├── butterfly.nc
+│   ├── just-KSG.ngc
+│   └── linuxcnc-logo.nc
+├── modules-list
+│   └── octave-forge-packages.txt
+├── README.md
+└── sessions
+    └── session-001.txt
+
+7 directories, 12 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github/wruslandra/using-octave$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY
+===========================================================
+

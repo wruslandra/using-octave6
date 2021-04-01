@@ -1,0 +1,72 @@
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave6$ ls -al
+total 32
+drwxrwxr-x  7 wruslan wruslan 4096 Apr  2 06:14 .
+drwxrwxr-x 16 wruslan wruslan 4096 Apr  2 06:03 ..
+drwxrwxr-x  3 wruslan wruslan 4096 Apr  1 12:04 general-docs
+drwxrwxr-x  8 wruslan wruslan 4096 Apr  2 05:30 .git
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 22 12:03 octave-6.2.0
+-rw-rw-r--  1 wruslan wruslan   39 Apr  2 05:30 README.md
+drwxrwxr-x  2 wruslan wruslan 4096 Apr  2 06:14 sessions
+drwxrwxr-x  2 wruslan wruslan 4096 Apr  1 12:03 workspace
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave6$ 
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave6$ tree ./
+./
+├── general-docs
+│   └── docs
+│       ├── download-latest-nurbs.txt
+│       ├── installation-order-is-important.txt
+│       ├── octave-5.2.0-packages-ubstudio-20.04-LTS.txt
+│       ├── octave-6.2.0-packages-ubstudio-20.04-LTS.txt
+│       ├── OctConf-2015-octave-nurbs.pdf
+│       └── to-copy-octave-packages.txt
+├── octave-6.2.0
+│   ├── docs
+│   │   └── octave-6.2.0-reference-manual.pdf
+│   ├── figures
+│   │   ├── jpg
+│   │   │   ├── Octave-6.2.0-2021-03-19-02-31-27.jpg
+│   │   │   └── Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.jpg
+│   │   ├── octave-6.2.0-Screenshot from 2021-03-22 12-01-15.png
+│   │   ├── png
+│   │   │   ├── Octave-6.2.0-2021-03-19-02-31-27.png
+│   │   │   └── Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.png
+│   │   ├── Screenshot_2021-03-31_12-19-17.png
+│   │   ├── Screenshot_2021-03-31_12-20-22.png
+│   │   ├── Screenshot_2021-03-31_15-37-33.png
+│   │   ├── Screenshot_2021-03-31_15-37-53.png
+│   │   └── Screenshot_2021-03-31_15-38-49.png
+│   ├── files
+│   │   ├── bismillah.ngc
+│   │   ├── butterfly.nc
+│   │   ├── just-KSG.ngc
+│   │   └── linuxcnc-logo.nc
+│   ├── installation-octave-6.2.0
+│   │   ├── 01-extract-octave-6.2.0-from-source.txt
+│   │   ├── 02-configure-octave-6.2.0.txt
+│   │   ├── 03-make-octave-6.2.0.txt
+│   │   ├── 04-make-check-octave-6.2.0.txt
+│   │   ├── 05-sudo-make-install-octave-6.2.0.txt
+│   │   ├── 06-octave-compiled-libraries.txt
+│   │   ├── 07-octave-compiled-binaries.txt
+│   │   ├── 08-Octave-6.2.0-2021-03-19-02-31-27.png
+│   │   └── 08-Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.png
+│   └── sessions
+│       ├── session-001.txt
+│       ├── session-002.txt
+│       ├── session-003.txt
+│       └── session-004.txt
+├── README.md
+└── workspace
+    └── sessions
+        └── session-octave6-001.txt
+
+12 directories, 36 files
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave6$ 
+
+===========================================================
+
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

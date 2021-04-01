@@ -1,0 +1,68 @@
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Mon 22 Mar 2021 10:30:23 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+SUMMARY OF STEPS
+===========================================================
+(1) Extract source code
+(2) ./configure
+(3) make             ... NOTE: Takes a long time.
+(4) make check
+(5) sudo make install
+(6) check compiled libraries
+(7) check compiled binaries
+(8) test compiled binaries
+
+===========================================================
+(7) CHECK COMPILED BINARIES
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /usr/bin/ | grep octave
+.... None ....
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /usr/local/bin/ | grep octave
+lrwxrwxrwx  1 root root      12 Mar 22 09:58 octave -> octave-6.2.0
+-rwxr-xr-x  1 root root  277120 Mar 22 07:30 octave-5.2.0
+-rwxr-xr-x  1 root root  279456 Mar 22 09:57 octave-6.2.0
+lrwxrwxrwx  1 root root      16 Mar 22 09:58 octave-cli -> octave-cli-6.2.0
+-rwxr-xr-x  1 root root  163624 Mar 22 07:30 octave-cli-5.2.0
+-rwxr-xr-x  1 root root  170000 Mar 22 09:57 octave-cli-6.2.0
+lrwxrwxrwx  1 root root      19 Mar 22 09:58 octave-config -> octave-config-6.2.0
+-rwxr-xr-x  1 root root 1032808 Mar 22 07:30 octave-config-5.2.0
+-rwxr-xr-x  1 root root 1033176 Mar 22 09:57 octave-config-6.2.0
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ which octave
+/usr/local/bin/octave
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ octave --version
+GNU Octave, version 6.2.0
+Copyright (C) 2021 The Octave Project Developers.
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ octave-5.2.0 --version
+GNU Octave, version 5.2.0
+Copyright (C) 2020 John W. Eaton and others.
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ octave-6.2.0 --version
+GNU Octave, version 6.2.0
+Copyright (C) 2021 The Octave Project Developers.
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

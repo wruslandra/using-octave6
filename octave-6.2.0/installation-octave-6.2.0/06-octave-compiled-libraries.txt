@@ -1,0 +1,98 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Mon 22 Mar 2021 10:30:23 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+SUMMARY OF STEPS
+===========================================================
+(1) Extract source code
+(2) ./configure
+(3) make             ... NOTE: Takes a long time.
+(4) make check
+(5) sudo make install
+(6) check compiled libraries
+(7) check compiled binaries
+(8) test compiled binaries
+
+===========================================================
+(6) CHECK COMPILED LIBRARIES
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /usr/local/lib/octave/
+total 1328
+drwxr-xr-x  5 root root    4096 Mar 22 09:58 .
+drwxr-xr-x 20 root root    4096 Mar  3 19:52 ..
+drwxr-xr-x  4 root root    4096 Mar 22 07:30 5.2.0
+drwxr-xr-x  4 root root    4096 Mar 22 09:58 6.2.0
+-rw-r--r--  1 root root 1338744 Nov 22 18:07 plplot_octave.oct
+drwxr-xr-x  3 root root    4096 May  3  2020 site
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /usr/local/lib/octave/6.2.0/
+total 946400
+drwxr-xr-x 4 root root      4096 Mar 22 09:58 .
+drwxr-xr-x 5 root root      4096 Mar 22 09:58 ..
+-rwxr-xr-x 1 root root      1281 Mar 22 09:58 liboctave.la
+lrwxrwxrwx 1 root root        18 Mar 22 09:58 liboctave.so -> liboctave.so.8.0.1
+lrwxrwxrwx 1 root root        18 Mar 22 09:58 liboctave.so.8 -> liboctave.so.8.0.1
+-rwxr-xr-x 1 root root 277167736 Mar 22 09:58 liboctave.so.8.0.1
+-rwxr-xr-x 1 root root      1667 Mar 22 09:58 liboctgui.la
+lrwxrwxrwx 1 root root        18 Mar 22 09:58 liboctgui.so -> liboctgui.so.6.0.1
+lrwxrwxrwx 1 root root        18 Mar 22 09:58 liboctgui.so.6 -> liboctgui.so.6.0.1
+-rwxr-xr-x 1 root root 104830968 Mar 22 09:58 liboctgui.so.6.0.1
+-rwxr-xr-x 1 root root      1520 Mar 22 09:58 liboctinterp.la
+lrwxrwxrwx 1 root root        21 Mar 22 09:58 liboctinterp.so -> liboctinterp.so.8.0.1
+lrwxrwxrwx 1 root root        21 Mar 22 09:58 liboctinterp.so.8 -> liboctinterp.so.8.0.1
+-rwxr-xr-x 1 root root 587073744 Mar 22 09:58 liboctinterp.so.8.0.1
+drwxr-xr-x 3 root root      4096 Mar 22 09:58 oct
+drwxr-xr-x 3 root root      4096 Mar 22 09:58 site
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ ls -al /usr/local/lib/octave/5.2.0/
+total 828304
+drwxr-xr-x 4 root root      4096 Mar 22 07:30 .
+drwxr-xr-x 5 root root      4096 Mar 22 09:58 ..
+-rwxr-xr-x 1 root root      1265 Mar 22 07:30 liboctave.la
+lrwxrwxrwx 1 root root        18 Mar 22 07:30 liboctave.so -> liboctave.so.7.0.1
+lrwxrwxrwx 1 root root        18 Mar 22 07:30 liboctave.so.7 -> liboctave.so.7.0.1
+-rwxr-xr-x 1 root root 260411280 Mar 22 07:30 liboctave.so.7.0.1
+-rwxr-xr-x 1 root root      1639 Mar 22 07:30 liboctgui.la
+lrwxrwxrwx 1 root root        18 Mar 22 07:30 liboctgui.so -> liboctgui.so.5.0.1
+lrwxrwxrwx 1 root root        18 Mar 22 07:30 liboctgui.so.5 -> liboctgui.so.5.0.1
+-rwxr-xr-x 1 root root  53670200 Mar 22 07:30 liboctgui.so.5.0.1
+-rwxr-xr-x 1 root root      1504 Mar 22 07:30 liboctinterp.la
+lrwxrwxrwx 1 root root        21 Mar 22 07:30 liboctinterp.so -> liboctinterp.so.7.0.1
+lrwxrwxrwx 1 root root        21 Mar 22 07:30 liboctinterp.so.7 -> liboctinterp.so.7.0.1
+-rwxr-xr-x 1 root root 534054968 Mar 22 07:30 liboctinterp.so.7.0.1
+drwxr-xr-x 3 root root      4096 May  3  2020 oct
+drwxr-xr-x 3 root root      4096 May  3  2020 site
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ tree /usr/local/lib/octave/site/
+/usr/local/lib/octave/site/
+└── oct
+    ├── api-v53
+    │   └── x86_64-pc-linux-gnu
+    ├── api-v55
+    │   └── x86_64-pc-linux-gnu
+    └── x86_64-pc-linux-gnu
+
+6 directories, 0 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================

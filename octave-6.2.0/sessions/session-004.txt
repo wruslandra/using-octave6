@@ -1,0 +1,112 @@
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra$ cd using-octave/
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ date
+Wed 31 Mar 2021 03:43:53 PM +08
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ uname -a
+Linux HPEliteBk8470p-ubstudio-20 5.8.0-48-lowlatency #54~20.04.1-Ubuntu SMP PREEMPT 
+Sat Mar 20 23:24:50 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ 
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ ls -al
+total 28
+drwxrwxr-x  6 wruslan wruslan 4096 Mar 31 10:50 .
+drwxrwxr-x 10 wruslan wruslan 4096 Mar 22 14:07 ..
+drwxrwxr-x  2 wruslan wruslan 4096 Mar 31 15:32 docs
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31 11:50 .git
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 22 11:32 octave-5.2.0
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 22 12:03 octave-6.2.0
+-rw-rw-r--  1 wruslan wruslan   51 Mar 19 00:35 README.md
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ tree ./
+./
+├── docs
+│   ├── download-latest-nurbs.txt
+│   ├── installation-order-is-important.txt
+│   ├── octave-5.2.0-packages-ubstudio-20.04-LTS.txt
+│   ├── octave-6.2.0-packages-ubstudio-20.04-LTS.txt
+│   ├── OctConf-2015-octave-nurbs.pdf
+│   └── to-copy-octave-packages.txt
+├── octave-5.2.0
+│   ├── docs
+│   │   └── octave-5.2.0-reference-manual.pdf
+│   ├── figures
+│   │   ├── octave-5.2.0-Screenshot from 2021-03-22 12-00-08.png
+│   │   ├── Screenshot_2021-03-31_06-33-31.png
+│   │   ├── Screenshot_2021-03-31_10-21-14.png
+│   │   ├── Screenshot_2021-03-31_10-39-53.png
+│   │   ├── Screenshot_2021-03-31_10-42-00.png
+│   │   ├── Screenshot_2021-03-31_10-42-40.png
+│   │   ├── Screenshot_2021-03-31_10-43-40.png
+│   │   ├── Screenshot_2021-03-31_10-44-14.png
+│   │   ├── Screenshot_2021-03-31_11-43-32.png
+│   │   ├── Screenshot_2021-03-31_11-44-16.png
+│   │   ├── Screenshot_2021-03-31_11-45-02.png
+│   │   └── Screenshot_2021-03-31_11-46-15.png
+│   ├── files
+│   │   ├── bismillah.ngc
+│   │   ├── butterfly.nc
+│   │   ├── just-KSG.ngc
+│   │   └── linuxcnc-logo.nc
+│   ├── installation-octave-5.2.0
+│   │   ├── 01-extract-octave-5.2.0-from-source.txt
+│   │   ├── 02-configure-octave-5.2.0.txt
+│   │   ├── 03-make-octave-5.2.0.txt
+│   │   ├── 04-make-check-octave-5.2.0.txt
+│   │   ├── 05-sudo-make-install-octave-5.2.0.txt
+│   │   ├── 06-octave-compiled-libraries.txt
+│   │   ├── 07-octave-compiled-binaries.txt
+│   │   ├── 08-Test-Screenshot from 2021-03-22 11-45-17.png
+│   │   └── 08-Test-Screenshot from 2021-03-22 11-48-23.png
+│   ├── modules-list
+│   │   └── octave-forge-packages.txt
+│   └── sessions
+│       ├── session-001.txt
+│       └── session-002.txt
+├── octave-6.2.0
+│   ├── docs
+│   │   └── octave-6.2.0-reference-manual.pdf
+│   ├── figures
+│   │   ├── jpg
+│   │   │   ├── Octave-6.2.0-2021-03-19-02-31-27.jpg
+│   │   │   └── Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.jpg
+│   │   ├── octave-6.2.0-Screenshot from 2021-03-22 12-01-15.png
+│   │   ├── png
+│   │   │   ├── Octave-6.2.0-2021-03-19-02-31-27.png
+│   │   │   └── Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.png
+│   │   ├── Screenshot_2021-03-31_12-19-17.png
+│   │   ├── Screenshot_2021-03-31_12-20-22.png
+│   │   ├── Screenshot_2021-03-31_15-37-33.png
+│   │   ├── Screenshot_2021-03-31_15-37-53.png
+│   │   └── Screenshot_2021-03-31_15-38-49.png
+│   ├── files
+│   │   ├── bismillah.ngc
+│   │   ├── butterfly.nc
+│   │   ├── just-KSG.ngc
+│   │   └── linuxcnc-logo.nc
+│   ├── installation-octave-6.2.0
+│   │   ├── 01-extract-octave-6.2.0-from-source.txt
+│   │   ├── 02-configure-octave-6.2.0.txt
+│   │   ├── 03-make-octave-6.2.0.txt
+│   │   ├── 04-make-check-octave-6.2.0.txt
+│   │   ├── 05-sudo-make-install-octave-6.2.0.txt
+│   │   ├── 06-octave-compiled-libraries.txt
+│   │   ├── 07-octave-compiled-binaries.txt
+│   │   ├── 08-Octave-6.2.0-2021-03-19-02-31-27.png
+│   │   └── 08-Octave-6.2.0-Cubic-Spline-2021-03-18-23-37-58.png
+│   └── sessions
+│       ├── session-001.txt
+│       ├── session-002.txt
+│       └── session-003.txt
+└── README.md
+
+16 directories, 63 files
+wruslan@HPEliteBk8470p-ubstudio-20:~/github/wruslandra/using-octave$ 
+
+

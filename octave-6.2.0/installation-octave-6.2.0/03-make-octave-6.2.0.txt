@@ -1,0 +1,66 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Mon 22 Mar 2021 10:30:23 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+SUMMARY OF STEPS
+===========================================================
+(1) Extract source code
+(2) ./configure
+(3) make             ... NOTE: Takes a long time.
+(4) make check
+(5) sudo make install
+(6) check compiled libraries
+(7) check compiled binaries
+(8) test compiled binaries
+
+===========================================================
+(3) MAKE
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ make > 03-make-octave-6.2.0.txt
+preserving existing HG-ID file
+preserving existing HG-ID file
+preserving existing HG-ID file
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ 
+
+===========================================================
+CONTENTS 03-make-octave-6.2.0.txt
+===========================================================
+make  all-recursive
+make[1]: Entering directory '/home/wruslan/opt/octave-6.2.0'
+Making all in libgnu
+make[2]: Entering directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make  all-recursive
+make[3]: Entering directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[4]: Entering directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[3]: Leaving directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[2]: Leaving directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[2]: Entering directory '/home/wruslan/opt/octave-6.2.0'
+
+Octave successfully built.  Now choose from the following:
+
+   ./run-octave    - to run in place to test before installing
+   make check      - to run the tests
+   make install    - to install (PREFIX=/usr/local)
+
+   HG ID for this build is "5cfdf97c5350"
+
+make[2]: Leaving directory '/home/wruslan/opt/octave-6.2.0'
+make[1]: Leaving directory '/home/wruslan/opt/octave-6.2.0'
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

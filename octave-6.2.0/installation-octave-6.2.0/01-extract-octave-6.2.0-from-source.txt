@@ -1,0 +1,73 @@
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Mon 22 Mar 2021 10:30:23 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+SUMMARY OF STEPS
+===========================================================
+(1) Extract source code
+(2) ./configure
+(3) make             ... NOTE: Takes a long time.
+(4) make check
+(5) sudo make install
+(6) check compiled libraries
+(7) check compiled binaries
+(8) test compiled binaries
+
+===========================================================
+(1) EXTRACT SOURCE CODE OCTAVE 6.2.0
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt$ cd octave-6.2.0/
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ ls -al
+total 7264
+drwxr-xr-x 14 wruslan wruslan    4096 Feb 20 01:36 .
+drwxrwxr-x 27 wruslan wruslan    4096 Mar 22 07:43 ..
+-rw-r--r--  1 wruslan wruslan   67834 Feb 20 01:36 aclocal.m4
+-rw-r--r--  1 wruslan wruslan   10171 Feb 20 01:36 AUTHORS
+-rw-r--r--  1 wruslan wruslan   13108 Feb 20 01:36 BUGS
+drwxr-xr-x  2 wruslan wruslan    4096 Feb 20 01:36 build-aux
+-rw-r--r--  1 wruslan wruslan 1519087 Feb 20 01:36 ChangeLog
+-rw-r--r--  1 wruslan wruslan     765 Feb 20 01:36 CITATION
+-rw-r--r--  1 wruslan wruslan   97083 Feb 20 01:36 config.in.h
+-rwxr-xr-x  1 wruslan wruslan 2402325 Feb 20 01:36 configure
+-rw-r--r--  1 wruslan wruslan  107987 Feb 20 01:36 configure.ac
+-rw-r--r--  1 wruslan wruslan   35149 Feb 20 01:36 COPYING
+drwxr-xr-x  6 wruslan wruslan    4096 Feb 20 01:36 doc
+drwxr-xr-x  5 wruslan wruslan    4096 Feb 20 01:36 etc
+drwxr-xr-x  4 wruslan wruslan    4096 Feb 20 01:36 examples
+-rw-r--r--  1 wruslan wruslan      13 Feb 20 01:36 HG-ID
+-rw-r--r--  1 wruslan wruslan   15756 Feb 20 01:36 INSTALL
+-rw-r--r--  1 wruslan wruslan   35105 Feb 20 01:36 INSTALL.OCTAVE
+drwxr-xr-x  9 wruslan wruslan   12288 Feb 20 01:36 libgnu
+drwxr-xr-x  6 wruslan wruslan    4096 Feb 20 01:36 libgui
+drwxr-xr-x  8 wruslan wruslan    4096 Feb 20 01:36 libinterp
+drwxr-xr-x  9 wruslan wruslan    4096 Feb 20 01:36 liboctave
+drwxr-xr-x  2 wruslan wruslan   12288 Feb 20 01:36 m4
+-rw-r--r--  1 wruslan wruslan   13077 Feb 20 01:36 Makefile.am
+-rw-r--r--  1 wruslan wruslan 2967014 Feb 20 01:36 Makefile.in
+-rw-r--r--  1 wruslan wruslan   12713 Feb 20 01:36 NEWS
+-rw-r--r--  1 wruslan wruslan    5506 Feb 20 01:36 octave.doap
+-rw-r--r--  1 wruslan wruslan    8177 Feb 20 01:36 oct-conf-post.in.h
+-rw-r--r--  1 wruslan wruslan    4150 Feb 20 01:36 README
+-rw-r--r--  1 wruslan wruslan    5380 Feb 20 01:36 run-octave.in
+drwxr-xr-x 37 wruslan wruslan    4096 Feb 20 01:36 scripts
+drwxr-xr-x  2 wruslan wruslan    4096 Feb 20 01:36 src
+drwxr-xr-x 48 wruslan wruslan    4096 Feb 20 01:36 test
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

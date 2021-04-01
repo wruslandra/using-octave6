@@ -1,0 +1,128 @@
+wruslan@HPEliteBk8470p-ubstudio-20:~$ date
+Wed 31 Mar 2021 11:35:40 AM +08
+
+wruslan@HPEliteBk8470p-ubstudio-20:~$ uname -a
+Linux HPEliteBk8470p-ubstudio-20 5.8.0-48-lowlatency #54~20.04.1-Ubuntu SMP PREEMPT 
+Sat Mar 20 23:24:50 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBk8470p-ubstudio-20:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBk8470p-ubstudio-20:~$ 
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~$ cd octave/
+wruslan@HPEliteBk8470p-ubstudio-20:~/octave$ ls -al
+total 60
+drwxr-xr-x 15 wruslan wruslan 4096 Mar 31 11:12 .
+drwxr-xr-x 34 wruslan wruslan 4096 Mar 31 11:12 ..
+drwxrwxr-x 17 wruslan wruslan 4096 Mar 31 10:16 arduino-0.6.0
+drwxrwxr-x  4 wruslan wruslan 4096 Mar 31 11:12 fuzzy-logic-toolkit-0.4.6
+drwxrwxr-x  5 wruslan wruslan 4096 Mar 31 09:59 general-2.1.1
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31 09:48 image-2.12.0
+drwxrwxr-x 17 wruslan wruslan 4096 Mar 31 10:16 instrument-control-0.7.0
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 31 10:03 io-2.6.3
+drwxrwxr-x  5 wruslan wruslan 4096 Mar 31 11:11 nan-3.5.3
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 31 11:10 optim-1.6.1
+drwxrwxr-x  3 wruslan wruslan 4096 Mar 31 11:08 splines-1.3.4
+drwxrwxr-x 10 wruslan wruslan 4096 May  1  2020 statistics-1.4.2
+drwxrwxr-x  4 wruslan wruslan 4096 Mar 31 10:06 struct-1.0.17
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31 10:58 symbolic-2.9.0
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 31 11:05 zeromq-1.5.2
+wruslan@HPEliteBk8470p-ubstudio-20:~/octave$ 
+
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~/octave$ wget -c https://octave.sourceforge.io/download.php?package=nurbs-1.4.3.tar.gz
+--2021-03-31 11:25:10--  https://octave.sourceforge.io/download.php?package=nurbs-1.4.3.tar.gz
+Resolving octave.sourceforge.io (octave.sourceforge.io)... 216.105.38.11
+Connecting to jaist.dl.sourceforge.net (jaist.dl.sourceforge.net)|2001:df0:2ed:feed::feed|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 124419 (122K) [application/x-gzip]
+Saving to: ‘download.php?package=nurbs-1.4.3.tar.gz’
+
+download.php?package=nurbs-1.4.3.tar.gz    100%[==========>] 121.50K   320KB/s    in 0.4s    
+
+2021-03-31 11:25:16 (320 KB/s) - ‘download.php?package=nurbs-1.4.3.tar.gz’ saved [124419/124419]
+
+wruslan@HPEliteBk8470p-ubstudio-20:~/octave$ 
+
+===========================================================
+INSTALL NURBS FROM INSIDE OCTAVE 5.2.0
+===========================================================
+>> pkg install 'https://octave.sourceforge.io/download.php?package=nurbs-1.4.3.tar.gz'
+For information about changes from previous versions of the nurbs package, run 'news nurbs'.
+>>
+
+>> pkg list
+Package Name         | Version | Installation directory
+---------------------+---------+-----------------------
+            arduino  |   0.6.0 | /home/wruslan/octave/arduino-0.6.0
+     communications  |   1.2.2 | /usr/share/octave/packages/communications-1.2.2
+            control  |   3.2.0 | /usr/share/octave/packages/control-3.2.0
+     data-smoothing  |   1.3.0 | /usr/share/octave/packages/data-smoothing-1.3.0
+           database  |   2.4.4 | /usr/share/octave/packages/database-2.4.4
+          dataframe  |   1.2.0 | /usr/share/octave/packages/dataframe-1.2.0
+             divand  |   1.1.2 | /usr/share/octave/packages/divand-1.1.2
+fuzzy-logic-toolkit  |   0.4.6 | /home/wruslan/octave/fuzzy-logic-toolkit-0.4.6
+            general  |   2.1.1 | /home/wruslan/octave/general-2.1.1
+                gsl  |   2.1.1 | /usr/share/octave/packages/gsl-2.1.1
+              image  |  2.12.0 | /home/wruslan/octave/image-2.12.0
+ instrument-control  |   0.7.0 | /home/wruslan/octave/instrument-control-0.7.0
+           interval  |   3.2.0 | /usr/share/octave/packages/interval-3.2.0
+                 io  |   2.6.3 | /home/wruslan/octave/io-2.6.3
+     linear-algebra  |   2.2.3 | /usr/share/octave/packages/linear-algebra-2.2.3
+              ltfat  |   2.3.1 | /usr/share/octave/packages/ltfat-2.3.1
+            mapping  |   1.2.1 | /usr/share/octave/packages/mapping-1.2.1
+      miscellaneous  |   1.3.0 | /usr/share/octave/packages/miscellaneous-1.3.0
+  missing-functions  |   1.0.2 | /usr/share/octave/packages/missing-functions-1.0.2
+                mvn  |   1.1.0 | /usr/share/octave/packages/mvn-1.1.0
+                nan  |   3.5.3 | /home/wruslan/octave/nan-3.5.3
+            ncarray  |   1.0.4 | /usr/share/octave/packages/ncarray-1.0.4
+             netcdf  |  1.0.12 | /usr/share/octave/packages/netcdf-1.0.12
+              nurbs  |   1.4.3 | /home/wruslan/octave/nurbs-1.4.3
+              optim  |   1.6.1 | /home/wruslan/octave/optim-1.6.1
+        optiminterp  |   0.3.6 | /usr/share/octave/packages/optiminterp-0.3.6
+           parallel  |   3.1.3 | /usr/share/octave/packages/parallel-3.1.3
+             signal  |   1.4.1 | /usr/share/octave/packages/signal-1.4.1
+            sockets  |   1.2.0 | /usr/share/octave/packages/sockets-1.2.0
+          sparsersb  |   1.0.6 | /usr/share/octave/packages/sparsersb-1.0.6
+            specfun  |   1.1.0 | /usr/share/octave/packages/specfun-1.1.0
+            splines  |   1.3.4 | /home/wruslan/octave/splines-1.3.4
+         statistics  |   1.4.2 | /home/wruslan/octave/statistics-1.4.2
+            strings  |   1.2.0 | /usr/share/octave/packages/strings-1.2.0
+             struct  |  1.0.17 | /home/wruslan/octave/struct-1.0.17
+           symbolic  |   2.9.0 | /home/wruslan/octave/symbolic-2.9.0
+                tsa  |   4.6.2 | /usr/share/octave/packages/tsa-4.6.2
+             zeromq  |   1.5.2 | /home/wruslan/octave/zeromq-1.5.2
+>>
+
+CHECK LOCAL PACKAGE DIRECTORY (SEE THE DATES BELOW)
+===========================================================
+wruslan@HPEliteBk8470p-ubstudio-20:~$ ls -al octave
+total 68
+drwxr-xr-x 17 wruslan wruslan 4096 Mar 31 11:38 .
+drwxr-xr-x 34 wruslan wruslan 4096 Mar 31 11:39 ..
+drwxrwxr-x 17 wruslan wruslan 4096 Mar 31 10:16 arduino-0.6.0
+drwxrwxr-x  4 wruslan wruslan 4096 Mar 31 11:12 fuzzy-logic-toolkit-0.4.6
+drwxrwxr-x  5 wruslan wruslan 4096 Mar 31 09:59 general-2.1.1
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31 09:48 image-2.12.0
+drwxrwxr-x 17 wruslan wruslan 4096 Mar 31 10:16 instrument-control-0.7.0
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 31 10:03 io-2.6.3
+drwxrwxr-x  5 wruslan wruslan 4096 Mar 31 11:11 nan-3.5.3
+drwxrwxr-x  5 wruslan wruslan 4096 Mar 31 11:30 nurbs-1.4.3
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 31 11:10 optim-1.6.1
+drwxrwxr-x  3 wruslan wruslan 4096 Mar 31 11:08 splines-1.3.4
+drwxrwxr-x 10 wruslan wruslan 4096 Mar 31 11:39 statistics-1.4.2
+drwxrwxr-x  4 wruslan wruslan 4096 Mar 31 10:06 struct-1.0.17
+drwxrwxr-x  8 wruslan wruslan 4096 Mar 31 10:58 symbolic-2.9.0
+drwxrwxr-x  7 wruslan wruslan 4096 Mar 31 11:05 zeromq-1.5.2
+drwxrwxr-x  2 wruslan wruslan 4096 Mar 31 11:32 zSOURCE-TARBALLS
+wruslan@HPEliteBk8470p-ubstudio-20:~$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+

@@ -1,0 +1,1117 @@
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ date
+Mon 22 Mar 2021 10:30:23 AM +08
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ uname -a
+Linux HPEliteBook8470p-Ub2004-rt38 5.4.66-rt38 #1 SMP PREEMPT_RT 
+Sat Sep 26 16:51:59 +08 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ lsb_release -a
+LSB Version:	core-11.1.0ubuntu2-noarch:security-11.1.0ubuntu2-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+wruslan@HPEliteBook8470p-Ub2004-rt38:~$ 
+
+===========================================================
+SUMMARY OF STEPS
+===========================================================
+(1) Extract source code
+(2) ./configure
+(3) make             ... NOTE: Takes a long time.
+(4) make check
+(5) sudo make install
+(6) check compiled libraries
+(7) check compiled binaries
+(8) test compiled binaries
+
+===========================================================
+(4) MAKE CHECK
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ make check
+preserving existing HG-ID file
+make  check-recursive
+make[1]: Entering directory '/home/wruslan/opt/octave-6.2.0'
+preserving existing HG-ID file
+Making check in libgnu
+make[2]: Entering directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make  check-recursive
+make[3]: Entering directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[4]: Entering directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[4]: Nothing to be done for 'check-am'.
+make[4]: Leaving directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[3]: Leaving directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[2]: Leaving directory '/home/wruslan/opt/octave-6.2.0/libgnu'
+make[2]: Entering directory '/home/wruslan/opt/octave-6.2.0'
+preserving existing HG-ID file
+
+Octave successfully built.  Now choose from the following:
+
+   ./run-octave    - to run in place to test before installing
+   make check      - to run the tests
+   make install    - to install (PREFIX=/usr/local)
+
+   HG ID for this build is "5cfdf97c5350"
+
+make  check-local
+make[3]: Entering directory '/home/wruslan/opt/octave-6.2.0'
+preserving existing HG-ID file
+
+Integrated test scripts:
+
+  liboctave/array/Array.cc-tst ................................... pass   21/21  
+  liboctave/array/CMatrix.cc-tst ................................. pass   11/11  
+  liboctave/array/CSparse.cc-tst ................................. pass   10/10  
+  liboctave/array/Sparse.cc-tst .................................. pass  107/107 
+  liboctave/array/dMatrix.cc-tst ................................. pass   10/10  
+  liboctave/array/dSparse.cc-tst ................................. pass   12/12  
+  liboctave/array/fCMatrix.cc-tst ................................ pass   11/11  
+  liboctave/array/fMatrix.cc-tst ................................. pass    8/8   
+  liboctave/array/idx-vector.cc-tst .............................. pass    2/2   
+  liboctave/util/oct-inttypes.cc-tst ............................. pass   28/28  
+  libinterp/corefcn/Cell.cc-tst .................................. pass    5/5   
+  libinterp/corefcn/__contourc__.cc-tst .......................... pass    1/1   
+  libinterp/corefcn/__dsearchn__.cc-tst .......................... pass    1/1   
+  libinterp/corefcn/__eigs__.cc-tst .............................. pass    1/1   
+  libinterp/corefcn/__ichol__.cc-tst ............................. pass    1/1   
+  libinterp/corefcn/__ilu__.cc-tst ............................... pass    1/1   
+  libinterp/corefcn/__lin_interpn__.cc-tst ....................... pass    1/1   
+  libinterp/corefcn/__magick_read__.cc-tst ....................... pass    4/4   
+  libinterp/corefcn/__pchip_deriv__.cc-tst ....................... pass    1/1   
+  libinterp/corefcn/__qp__.cc-tst ................................ pass    1/1   
+  libinterp/corefcn/amd.cc-tst ................................... pass    4/4   
+  libinterp/corefcn/besselj.cc-tst ............................... pass  191/191 
+  libinterp/corefcn/bitfcns.cc-tst ............................... pass   60/60  
+  libinterp/corefcn/bsxfun.cc-tst ................................ pass   77/77  
+  libinterp/corefcn/call-stack.cc-tst ............................ pass    3/3   
+  libinterp/corefcn/cellfun.cc-tst ............................... pass  134/134 
+  libinterp/corefcn/chol.cc-tst .................................. pass   42/42  
+  libinterp/corefcn/colamd.cc-tst ................................ pass    7/7   
+  libinterp/corefcn/colloc.cc-tst ................................ pass   12/12  
+  libinterp/corefcn/conv2.cc-tst ................................. pass   48/51  
+                                                    (reported bug) XFAIL   3
+  libinterp/corefcn/dassl.cc-tst ................................. pass    4/4   
+  libinterp/corefcn/data.cc-tst .................................. pass 1145/1151
+                                                    (reported bug) XFAIL   6
+  libinterp/corefcn/debug.cc-tst ................................. pass    1/1   
+  libinterp/corefcn/defaults.cc-tst .............................. pass    6/6   
+  libinterp/corefcn/det.cc-tst ................................... pass    6/6   
+  libinterp/corefcn/dirfns.cc-tst ................................ pass    1/1   
+  libinterp/corefcn/dlmread.cc-tst ............................... pass   10/10  
+  libinterp/corefcn/dmperm.cc-tst ................................ pass    5/5   
+  libinterp/corefcn/dot.cc-tst ................................... pass   24/24  
+  libinterp/corefcn/eig.cc-tst ................................... pass   73/73  
+  libinterp/corefcn/ellipj.cc-tst ................................ pass   18/18  
+  libinterp/corefcn/environment.cc-tst ........................... pass    6/6   
+  libinterp/corefcn/error.cc-tst ................................. pass    4/4   
+  libinterp/corefcn/errwarn.cc-tst ............................... pass    1/1   
+  libinterp/corefcn/event-manager.cc-tst ......................... pass    3/3   
+  libinterp/corefcn/fcn-info.cc-tst .............................. pass    4/4   
+  libinterp/corefcn/fft.cc-tst ................................... pass   19/19  
+  libinterp/corefcn/fft2.cc-tst .................................. pass    4/4   
+  libinterp/corefcn/file-io.cc-tst ............................... pass   93/93  
+  libinterp/corefcn/filter.cc-tst ................................ pass   14/14  
+  libinterp/corefcn/find.cc-tst .................................. pass   22/22  
+  libinterp/corefcn/gcd.cc-tst ................................... pass    9/9   
+  libinterp/corefcn/getrusage.cc-tst ............................. pass    1/1   
+  libinterp/corefcn/givens.cc-tst ................................ pass    6/6   
+  libinterp/corefcn/graphics.cc-tst .............................. pass   53/53  
+  libinterp/corefcn/gsvd.cc-tst .................................. pass   17/18  
+                                                    (reported bug) XFAIL   1
+  libinterp/corefcn/hash.cc-tst .................................. pass   53/53  
+  libinterp/corefcn/help.cc-tst .................................. pass    1/1   
+  libinterp/corefcn/hess.cc-tst .................................. pass    5/5   
+  libinterp/corefcn/hex2num.cc-tst ............................... pass   21/21  
+  libinterp/corefcn/input.cc-tst ................................. pass   11/11  
+  libinterp/corefcn/inv.cc-tst ................................... pass   20/20  
+  libinterp/corefcn/kron.cc-tst .................................. pass   14/14  
+  libinterp/corefcn/lookup.cc-tst ................................ pass   20/20  
+  libinterp/corefcn/lsode.cc-tst ................................. pass    5/5   
+  libinterp/corefcn/lu.cc-tst .................................... pass   23/23  
+  libinterp/corefcn/mappers.cc-tst ............................... pass  421/421 
+  libinterp/corefcn/matrix_type.cc-tst ........................... pass   51/51  
+  libinterp/corefcn/max.cc-tst ................................... pass  111/114 
+                                                    (reported bug) XFAIL   3
+  libinterp/corefcn/mgorth.cc-tst ................................ pass    2/2   
+  libinterp/corefcn/nproc.cc-tst ................................. pass    6/6   
+  libinterp/corefcn/oct-hist.cc-tst .............................. pass    2/2   
+  libinterp/corefcn/oct-map.cc-tst ............................... pass   10/10  
+  libinterp/corefcn/ordschur.cc-tst .............................. pass    4/4   
+  libinterp/corefcn/pinv.cc-tst .................................. pass   17/17  
+  libinterp/corefcn/pr-output.cc-tst ............................. pass   12/13  
+                                                    (reported bug) XFAIL   1
+  libinterp/corefcn/psi.cc-tst ................................... pass   30/30  
+  libinterp/corefcn/qr.cc-tst .................................... pass   57/57  
+  libinterp/corefcn/quad.cc-tst .................................. pass   12/12  
+  libinterp/corefcn/quadcc.cc-tst ................................ pass   24/24  
+  libinterp/corefcn/qz.cc-tst .................................... pass    5/5   
+  libinterp/corefcn/rand.cc-tst .................................. pass   68/68  
+  libinterp/corefcn/rcond.cc-tst ................................. pass    8/8   
+  libinterp/corefcn/regexp.cc-tst ................................ pass  115/115 
+  libinterp/corefcn/schur.cc-tst ................................. pass   11/11  
+  libinterp/corefcn/sighandlers.cc-tst ........................... pass   11/11  
+  libinterp/corefcn/sparse-xpow.cc-tst ........................... pass    2/2   
+  libinterp/corefcn/sparse.cc-tst ................................ pass   29/29  
+  libinterp/corefcn/spparms.cc-tst ............................... pass    9/9   
+  libinterp/corefcn/sqrtm.cc-tst ................................. pass    3/3   
+  libinterp/corefcn/strfind.cc-tst ............................... pass   23/23  
+  libinterp/corefcn/strfns.cc-tst ................................ pass  128/128 
+  libinterp/corefcn/sub2ind.cc-tst ............................... pass   31/31  
+  libinterp/corefcn/svd.cc-tst ................................... pass   20/20  
+  libinterp/corefcn/sylvester.cc-tst ............................. pass    9/9   
+  libinterp/corefcn/symbfact.cc-tst .............................. pass    4/4   
+  libinterp/corefcn/symtab.cc-tst ................................ pass    3/3   
+  libinterp/corefcn/syscalls.cc-tst .............................. pass   11/11  
+  libinterp/corefcn/sysdep.cc-tst ................................ pass    8/8   
+                                              (run-time condition) SKIP   12
+  libinterp/corefcn/time.cc-tst .................................. pass   27/27  
+  libinterp/corefcn/toplev.cc-tst ................................ pass    7/7   
+  libinterp/corefcn/tril.cc-tst .................................. pass    2/2   
+  libinterp/corefcn/tsearch.cc-tst ............................... pass    6/6   
+  libinterp/corefcn/typecast.cc-tst .............................. pass   60/60  
+  libinterp/corefcn/utils.cc-tst ................................. pass  100/100 
+                                              (run-time condition) SKIP    1
+  libinterp/corefcn/variables.cc-tst ............................. pass   44/44  
+  libinterp/dldfcn/__delaunayn__.cc-tst .......................... pass    1/1   
+  libinterp/dldfcn/__fltk_uigetfile__.cc-tst ..................... pass    1/1   
+  libinterp/dldfcn/__glpk__.cc-tst ............................... pass    1/1   
+  libinterp/dldfcn/__init_fltk__.cc-tst .......................... pass    1/1   
+  libinterp/dldfcn/__init_gnuplot__.cc-tst ....................... pass    1/1   
+  libinterp/dldfcn/__ode15__.cc-tst .............................. pass    1/1   
+  libinterp/dldfcn/__voronoi__.cc-tst ............................ pass    1/1   
+  libinterp/dldfcn/audiodevinfo.cc-tst ...........................ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2642:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm_route.c:869:(find_matching_chmap) Found no matching channel map
+ALSA lib pcm_route.c:869:(find_matching_chmap) Found no matching channel map
+ALSA lib pcm_route.c:869:(find_matching_chmap) Found no matching channel map
+ALSA lib pcm_route.c:869:(find_matching_chmap) Found no matching channel map
+ALSA lib pcm_oss.c:377:(_snd_pcm_oss_open) Unknown field port
+ALSA lib pcm_oss.c:377:(_snd_pcm_oss_open) Unknown field port
+ALSA lib pcm_usb_stream.c:486:(_snd_pcm_usb_stream_open) Invalid type for card
+ALSA lib pcm_usb_stream.c:486:(_snd_pcm_usb_stream_open) Invalid type for card
+ pass    4/4   
+  libinterp/dldfcn/audioread.cc-tst .............................. pass    6/6   
+  libinterp/dldfcn/convhulln.cc-tst .............................. pass    4/4   
+  libinterp/dldfcn/fftw.cc-tst ................................... pass   13/13  
+  libinterp/dldfcn/gzip.cc-tst ................................... pass    5/7   
+                                                    (reported bug) XFAIL   2
+  libinterp/octave-value/ov-base.cc-tst .......................... pass    1/1   
+  libinterp/octave-value/ov-bool-mat.cc-tst ...................... pass    1/1   
+  libinterp/octave-value/ov-cell.cc-tst .......................... pass    2/2   
+  libinterp/octave-value/ov-class.cc-tst ......................... pass   50/50  
+  libinterp/octave-value/ov-classdef.cc-tst ...................... pass    1/1   
+  libinterp/octave-value/ov-cx-diag.cc-tst ....................... pass    1/1   
+  libinterp/octave-value/ov-fcn-handle.cc-tst .................... pass   14/14  
+  libinterp/octave-value/ov-java.cc-tst .......................... pass   15/16  
+                                                    (reported bug) XFAIL   1
+  libinterp/octave-value/ov-lazy-idx.cc-tst ...................... pass   11/11  
+  libinterp/octave-value/ov-null-mat.cc-tst ...................... pass    8/8   
+  libinterp/octave-value/ov-oncleanup.cc-tst ..................... pass    1/1   
+  libinterp/octave-value/ov-struct.cc-tst ........................ pass   28/28  
+  libinterp/octave-value/ov-typeinfo.cc-tst ...................... pass   56/56  
+  libinterp/octave-value/ov-usr-fcn.cc-tst ....................... pass    9/9   
+  libinterp/octave-value/ov.cc-tst ............................... pass  109/109 
+  libinterp/parse-tree/bp-table.cc-tst ........................... pass    1/1   
+  libinterp/parse-tree/lex.ll-tst ................................ pass    7/7   
+  libinterp/parse-tree/oct-parse.yy-tst .......................... pass   30/30  
+  libinterp/parse-tree/pt-assign.cc-tst .......................... pass    5/5   
+  libinterp/parse-tree/pt-eval.cc-tst ............................ pass   17/17  
+  libinterp/parse-tree/pt-fcn-handle.cc-tst ...................... pass    5/5   
+  libinterp/parse-tree/pt-idx.cc-tst ............................. pass    6/6   
+  libinterp/parse-tree/pt-tm-const.cc-tst ........................ pass  202/203 
+                                                    (reported bug) XFAIL   1
+  libinterp/octave.cc-tst ........................................ pass    8/8   
+  +containers/Map.m .............................................. pass   38/38  
+  +matlab/+lang/makeUniqueStrings.m .............................. pass   13/13  
+  +matlab/+lang/makeValidName.m .................................. pass   17/17  
+  @ftp/ascii.m ................................................... pass    1/1   
+  @ftp/binary.m .................................................. pass    1/1   
+  @ftp/cd.m ...................................................... pass    1/1   
+  @ftp/close.m ................................................... pass    1/1   
+  @ftp/delete.m .................................................. pass    1/1   
+  @ftp/dir.m ..................................................... pass    1/1   
+  @ftp/ftp.m ..................................................... pass    1/1   
+  @ftp/loadobj.m ................................................. pass    1/1   
+  @ftp/mget.m .................................................... pass    1/1   
+  @ftp/mkdir.m ................................................... pass    1/1   
+  @ftp/mput.m .................................................... pass    1/1   
+  @ftp/rename.m .................................................. pass    1/1   
+  @ftp/rmdir.m ................................................... pass    1/1   
+  @ftp/saveobj.m ................................................. pass    1/1   
+  audio/@audioplayer/audioplayer.m ............................... pass    5/5   
+  audio/@audiorecorder/audiorecorder.m ........................... pass    4/4   
+  audio/record.m ................................................. pass    5/5   
+  audio/sound.m .................................................. pass    4/4   
+  audio/soundsc.m ................................................ pass   10/10  
+  elfun/acosd.m .................................................. pass    3/3   
+  elfun/acot.m ................................................... pass    3/3   
+  elfun/acotd.m .................................................. pass    3/3   
+  elfun/acoth.m .................................................. pass    3/3   
+  elfun/acsc.m ................................................... pass    3/3   
+  elfun/acscd.m .................................................. pass    3/3   
+  elfun/acsch.m .................................................. pass    3/3   
+  elfun/asec.m ................................................... pass    3/3   
+  elfun/asecd.m .................................................. pass    3/3   
+  elfun/asech.m .................................................. pass    4/4   
+  elfun/asind.m .................................................. pass    3/3   
+  elfun/atan2d.m ................................................. pass    3/3   
+  elfun/atand.m .................................................. pass    3/3   
+  elfun/cosd.m ................................................... pass    5/5   
+  elfun/cot.m .................................................... pass    3/3   
+  elfun/cotd.m ................................................... pass    5/5   
+  elfun/coth.m ................................................... pass    3/3   
+  elfun/csc.m .................................................... pass    3/3   
+  elfun/cscd.m ................................................... pass    5/5   
+  elfun/csch.m ................................................... pass    3/3   
+  elfun/sec.m .................................................... pass    3/3   
+  elfun/secd.m ................................................... pass    5/5   
+  elfun/sech.m ................................................... pass    3/3   
+  elfun/sind.m ................................................... pass    5/5   
+  elfun/tand.m ................................................... pass    5/5   
+  general/accumarray.m ........................................... pass   23/23  
+  general/accumdim.m ............................................. pass   13/13  
+  general/bincoeff.m ............................................. pass   11/11  
+  general/bitcmp.m ............................................... pass   10/10  
+  general/bitget.m ............................................... pass   15/15  
+  general/bitset.m ............................................... pass   26/26  
+  general/blkdiag.m .............................................. pass   10/10  
+  general/cart2pol.m ............................................. pass   24/24  
+  general/cart2sph.m ............................................. pass   18/18  
+  general/cell2mat.m ............................................. pass   20/20  
+  general/celldisp.m ............................................. pass    3/3   
+  general/circshift.m ............................................ pass   17/17  
+  general/common_size.m .......................................... pass    4/4   
+  general/cplxpair.m ............................................. pass   23/23  
+  general/cumtrapz.m ............................................. pass   27/27  
+  general/curl.m ................................................. pass    1/1   
+  general/dblquad.m .............................................. pass    4/4   
+  general/deal.m ................................................. pass    4/4   
+  general/deg2rad.m .............................................. pass    8/8   
+  general/del2.m ................................................. pass   20/20  
+  general/divergence.m ........................................... pass    1/1   
+  general/flip.m ................................................. pass   10/10  
+  general/fliplr.m ............................................... pass    9/9   
+  general/flipud.m ............................................... pass    9/9   
+  general/gradient.m ............................................. pass    5/5   
+  general/idivide.m .............................................. pass   18/18  
+  general/int2str.m .............................................. pass    9/9   
+  general/integral.m ............................................. pass   31/31  
+  general/integral2.m ............................................ pass   50/50  
+  general/integral3.m ............................................ pass   42/42  
+  general/interp1.m .............................................. pass  212/212 
+  general/interp2.m .............................................. pass   51/51  
+  general/interp3.m .............................................. pass   23/23  
+  general/interpft.m ............................................. pass   15/15  
+  general/interpn.m .............................................. pass    7/7   
+  general/isequal.m .............................................. pass  115/115 
+  general/isequaln.m ............................................. pass   16/16  
+  general/logspace.m ............................................. pass   13/13  
+  general/nextpow2.m ............................................. pass   16/16  
+  general/num2str.m .............................................. pass   44/44  
+  general/pol2cart.m ............................................. pass   24/24  
+  general/polyarea.m ............................................. pass    4/4   
+  general/postpad.m .............................................. pass   15/15  
+  general/prepad.m ............................................... pass   20/20  
+  general/quad2d.m ............................................... pass   47/47  
+  general/quadgk.m ............................................... pass   27/27  
+  general/quadl.m ................................................ pass   10/10  
+  general/quadv.m ................................................ pass   11/11  
+  general/rad2deg.m .............................................. pass    8/8   
+  general/randi.m ................................................ pass   29/29  
+  general/rat.m .................................................. pass   15/15  
+  general/repelem.m .............................................. pass   58/58  
+  general/repmat.m ............................................... pass   45/45  
+  general/rescale.m .............................................. pass   24/24  
+  general/rot90.m ................................................ pass    9/9   
+  general/rotdim.m ............................................... pass   20/20  
+  general/shift.m ................................................ pass    9/9   
+  general/shiftdim.m ............................................. pass    6/6   
+  general/sortrows.m ............................................. pass    9/9   
+  general/sph2cart.m ............................................. pass   18/18  
+  general/structfun.m ............................................ pass    3/3   
+  general/subsindex.m ............................................ pass    3/3   
+  general/trapz.m ................................................ pass   26/26  
+  general/triplequad.m ........................................... pass    1/1   
+  general/xor.m .................................................. pass    8/8   
+  geometry/convhull.m ............................................ pass   11/11  
+  geometry/delaunay.m ............................................QH6019 qhull input error: can not scale last coordinate.  Input is cocircular
+   or cospherical.   Use option 'Qz' to add a point at infinity.
+
+While executing:  | qhull d Qt Qbb Qc
+Options selected for Qhull 2015.2 2016/01/18:
+  run-id 789583598  delaunay  Qtriangulate  Qbbound-last  Qcoplanar-keep
+  _pre-merge  _zero-centrum  Qinterior-keep  Pgood
+QH6019 qhull input error: can not scale last coordinate.  Input is cocircular
+   or cospherical.   Use option 'Qz' to add a point at infinity.
+
+While executing:  | qhull d Qt Qbb Qc
+Options selected for Qhull 2015.2 2016/01/18:
+  run-id 789583598  delaunay  Qtriangulate  Qbbound-last  Qcoplanar-keep
+  _pre-merge  _zero-centrum  Qinterior-keep  Pgood
+ pass   15/15  
+  geometry/delaunayn.m ........................................... pass    3/3   
+  geometry/dsearch.m ............................................. pass    2/2   
+  geometry/dsearchn.m ............................................ pass    6/6   
+  geometry/griddata.m ............................................ pass   14/14  
+  geometry/griddata3.m ........................................... pass    2/2   
+  geometry/griddatan.m ...........................................QH6239 Qhull precision error: Initial simplex is cocircular or cospherical.  Use option 'Qz' for the Delaunay triangulation or Voronoi diagram of cocircular/cospherical points.  Option 'Qz' adds a point "at infinity".    Use option 'Qs' to search all points for the initial simplex.
+
+While executing:  | qhull d Qt Qbb Qc
+Options selected for Qhull 2015.2 2016/01/18:
+  run-id 789667633  delaunay  Qtriangulate  Qbbound-last  Qcoplanar-keep
+  _pre-merge  _zero-centrum  Qinterior-keep  Pgood  _max-width  1
+  Error-roundoff 1.4e-15  _one-merge 9.7e-15  Visible-distance 2.8e-15
+  U-coplanar-distance 2.8e-15  Width-outside 5.5e-15  _wide-facet 1.7e-14
+ pass    3/3   
+  geometry/inpolygon.m ........................................... pass   13/13  
+  geometry/rectint.m ............................................. pass   17/17  
+  geometry/rotx.m ................................................ pass    7/7   
+  geometry/roty.m ................................................ pass    7/7   
+  geometry/rotz.m ................................................ pass    7/7   
+  geometry/tsearchn.m ............................................ pass    5/5   
+  geometry/voronoi.m ............................................. pass   10/10  
+  geometry/voronoin.m ............................................ pass    3/3   
+  gui/dialog.m ................................................... pass    1/1   
+  gui/errordlg.m ................................................. pass    1/1   
+  gui/getappdata.m ............................................... pass    6/6   
+  gui/guidata.m .................................................. pass    4/4   
+  gui/helpdlg.m .................................................. pass    1/1   
+  gui/inputdlg.m ................................................. pass    5/5   
+  gui/isappdata.m ................................................ pass    5/5   
+  gui/listdlg.m .................................................. pass    6/6   
+  gui/movegui.m .................................................. pass    5/5   
+  gui/msgbox.m ................................................... pass   10/10  
+  gui/questdlg.m ................................................. pass    7/7   
+  gui/rmappdata.m ................................................ pass    7/7   
+  gui/setappdata.m ............................................... pass   11/11  
+  gui/uigetdir.m ................................................. pass    1/1   
+  gui/uigetfile.m ................................................ pass    1/1   
+  gui/uimenu.m ................................................... pass    3/3   
+  gui/uiputfile.m ................................................ pass    1/1   
+  gui/uisetfont.m ................................................ pass    5/5   
+  gui/waitbar.m .................................................. pass    4/4   
+  gui/waitforbuttonpress.m ....................................... pass    2/2   
+  gui/warndlg.m .................................................. pass    1/1   
+  help/__gripe_missing_component__.m ............................. pass    7/7   
+  help/__makeinfo__.m ............................................ pass    1/1   
+  help/__unimplemented__.m ....................................... pass    3/3   
+  help/ans.m ..................................................... pass    1/1   
+  help/bessel.m .................................................. pass    1/1   
+  help/debug.m ................................................... pass    1/1   
+  help/doc.m ..................................................... pass    1/1   
+  help/doc_cache_create.m ........................................ pass    1/1   
+  help/error_ids.m ............................................... pass    1/1   
+  help/get_first_help_sentence.m ................................. pass    8/8   
+  help/help.m .................................................... pass    5/5   
+  help/print_usage.m ............................................. pass    1/1   
+  help/slash.m ................................................... pass    1/1   
+  help/type.m .................................................... pass    9/9   
+  help/warning_ids.m ............................................. pass    1/1   
+  help/which.m ................................................... pass    8/8   
+  image/cmpermute.m .............................................. pass   19/19  
+  image/cmunique.m ............................................... pass   19/19  
+  image/colormap.m ............................................... pass    9/9   
+  image/contrast.m ............................................... pass    1/1   
+  image/frame2im.m ............................................... pass    4/4   
+  image/getframe.m ............................................... pass    2/2   
+  image/gray2ind.m ............................................... pass   20/20  
+  image/hsv2rgb.m ................................................ pass   28/28  
+  image/im2double.m .............................................. pass   18/18  
+  image/im2frame.m ............................................... pass    4/4   
+  image/image.m .................................................. pass    2/2   
+  image/imfinfo.m ................................................ pass    5/5   
+  image/imformats.m .............................................. pass    6/6   
+  image/imread.m ................................................. pass    5/5   
+  image/imshow.m ................................................. pass    6/6   
+  image/imwrite.m ................................................ pass   20/20  
+  image/ind2gray.m ............................................... pass   19/19  
+  image/ind2rgb.m ................................................ pass   22/22  
+  image/iscolormap.m ............................................. pass    5/5   
+  image/movie.m .................................................. pass   12/12  
+  image/rgb2gray.m ............................................... pass   17/17  
+  image/rgb2hsv.m ................................................ pass   26/26  
+  image/rgb2ind.m ................................................ pass    6/6   
+  image/rgbplot.m ................................................ pass    5/5   
+  io/beep.m ...................................................... pass    1/1   
+  io/csvread.m ................................................... pass    1/1   
+  io/csvwrite.m .................................................. pass    2/2   
+  io/dlmwrite.m .................................................. pass    1/1   
+  io/fileread.m .................................................. pass    4/4   
+  io/importdata.m ................................................ pass   26/26  
+  io/is_valid_file_id.m .......................................... pass    5/5   
+  java/javaaddpath.m ............................................. pass    9/9   
+  java/javachk.m ................................................. pass    8/8   
+                                              (run-time condition) SKIP    1
+  java/javarmpath.m .............................................. pass    6/6   
+  java/usejava.m ................................................. pass    6/6   
+  legacy/findstr.m ............................................... pass    7/7   
+  legacy/genvarname.m ............................................ pass   31/31  
+  legacy/isdir.m ................................................. pass    5/5   
+  legacy/strmatch.m .............................................. pass   22/22  
+  legacy/strread.m ............................................... pass   56/56  
+  legacy/textread.m .............................................. pass   10/10  
+  legacy/vectorize.m ............................................. pass    9/9   
+  linear-algebra/bandwidth.m ..................................... pass   21/21  
+  linear-algebra/commutation_matrix.m ............................ pass    6/6   
+  linear-algebra/cond.m .......................................... pass    8/8   
+  linear-algebra/condeig.m ....................................... pass    8/8   
+  linear-algebra/condest.m ....................................... pass   14/14  
+  linear-algebra/cross.m ......................................... pass    5/5   
+  linear-algebra/duplication_matrix.m ............................ pass    7/7   
+  linear-algebra/expm.m .......................................... pass   10/10  
+  linear-algebra/gls.m ........................................... pass   13/13  
+  linear-algebra/housh.m ......................................... pass    6/6   
+  linear-algebra/isbanded.m ...................................... pass   19/19  
+  linear-algebra/isdefinite.m .................................... pass   10/10  
+  linear-algebra/isdiag.m ........................................ pass   13/13  
+  linear-algebra/ishermitian.m ................................... pass   26/26  
+  linear-algebra/issymmetric.m ................................... pass   26/26  
+  linear-algebra/istril.m ........................................ pass   12/12  
+  linear-algebra/istriu.m ........................................ pass   12/12  
+  linear-algebra/linsolve.m ...................................... pass    8/8   
+  linear-algebra/logm.m .......................................... pass   10/10  
+  linear-algebra/lscov.m ......................................... pass   10/10  
+  linear-algebra/normest.m ....................................... pass    8/8   
+  linear-algebra/normest1.m ...................................... pass   17/17  
+  linear-algebra/null.m .......................................... pass   10/10  
+  linear-algebra/ols.m ........................................... pass   12/12  
+  linear-algebra/ordeig.m ........................................ pass   14/14  
+  linear-algebra/orth.m .......................................... pass    1/1   
+  linear-algebra/planerot.m ...................................... pass    5/5   
+  linear-algebra/qzhess.m ........................................ pass    4/4   
+  linear-algebra/rank.m .......................................... pass    9/9   
+  linear-algebra/rref.m .......................................... pass    6/6   
+  linear-algebra/subspace.m ...................................... pass    6/6   
+  linear-algebra/trace.m ......................................... pass    9/9   
+  linear-algebra/vech.m .......................................... pass    3/3   
+  linear-algebra/vecnorm.m ....................................... pass   13/13  
+  miscellaneous/bug_report.m ..................................... pass    1/1   
+  miscellaneous/bunzip2.m ........................................ pass    1/1   
+  miscellaneous/cast.m ........................................... pass   17/17  
+  miscellaneous/citation.m ....................................... pass    3/3   
+  miscellaneous/clearvars.m ...................................... pass    5/5   
+  miscellaneous/compare_versions.m ............................... pass   46/46  
+  miscellaneous/computer.m ....................................... pass    5/5   
+  miscellaneous/copyfile.m ....................................... pass    7/7   
+  miscellaneous/delete.m ......................................... pass    4/4   
+  miscellaneous/dir.m ............................................ pass    4/4   
+  miscellaneous/dos.m ............................................ pass    3/3   
+  miscellaneous/edit.m ........................................... pass    1/1   
+  miscellaneous/fieldnames.m ..................................... pass    5/5   
+  miscellaneous/fileattrib.m ..................................... pass    3/3   
+  miscellaneous/fileparts.m ...................................... pass   13/13  
+  miscellaneous/fullfile.m ....................................... pass   26/26  
+  miscellaneous/getfield.m ....................................... pass    5/5   
+  miscellaneous/grabcode.m ....................................... pass    2/2   
+  miscellaneous/gunzip.m ......................................... pass    1/1   
+  miscellaneous/info.m ........................................... pass    1/1   
+  miscellaneous/inputParser.m .................................... pass   27/27  
+  miscellaneous/inputname.m ...................................... pass   11/11  
+  miscellaneous/isdeployed.m ..................................... pass    1/1   
+  miscellaneous/isfile.m ......................................... pass    8/8   
+  miscellaneous/isfolder.m ....................................... pass    9/9   
+  miscellaneous/ismac.m .......................................... pass    2/2   
+  miscellaneous/ismethod.m ....................................... pass    3/3   
+  miscellaneous/ispc.m ........................................... pass    2/2   
+  miscellaneous/isunix.m ......................................... pass    2/2   
+  miscellaneous/license.m ........................................ pass   11/11  
+  miscellaneous/list_primes.m .................................... pass    7/7   
+  miscellaneous/ls.m ............................................. pass    3/3   
+  miscellaneous/ls_command.m ..................................... pass    2/2   
+  miscellaneous/menu.m ........................................... pass    5/5   
+  miscellaneous/methods.m ........................................ pass    9/9   
+  miscellaneous/mex.m ............................................ pass    1/1   
+  miscellaneous/mexext.m ......................................... pass    1/1   
+  miscellaneous/mkdir.m .......................................... pass    5/5   
+  miscellaneous/movefile.m ....................................... pass    6/6   
+  miscellaneous/mustBeFinite.m ................................... pass    6/6   
+  miscellaneous/mustBeGreaterThan.m .............................. pass    7/7   
+  miscellaneous/mustBeGreaterThanOrEqual.m ....................... pass    6/6   
+  miscellaneous/mustBeInteger.m .................................. pass    7/7   
+  miscellaneous/mustBeLessThan.m ................................. pass    8/8   
+  miscellaneous/mustBeLessThanOrEqual.m .......................... pass    5/5   
+  miscellaneous/mustBeMember.m ................................... pass    6/6   
+  miscellaneous/mustBeNegative.m ................................. pass    4/4   
+  miscellaneous/mustBeNonNan.m ................................... pass    4/4   
+  miscellaneous/mustBeNonempty.m ................................. pass    5/5   
+  miscellaneous/mustBeNonnegative.m .............................. pass    6/6   
+  miscellaneous/mustBeNonpositive.m .............................. pass    5/5   
+  miscellaneous/mustBeNonsparse.m ................................ pass    3/3   
+  miscellaneous/mustBeNonzero.m .................................. pass    4/4   
+  miscellaneous/mustBeNumeric.m .................................. pass    6/6   
+  miscellaneous/mustBeNumericOrLogical.m ......................... pass    5/5   
+  miscellaneous/mustBePositive.m ................................. pass    8/8   
+  miscellaneous/mustBeReal.m ..................................... pass    4/4   
+  miscellaneous/namedargs2cell.m ................................. pass    5/5   
+  miscellaneous/namelengthmax.m .................................. pass    1/1   
+  miscellaneous/nargchk.m ........................................ pass    9/9   
+  miscellaneous/narginchk.m ...................................... pass    4/4   
+  miscellaneous/nargoutchk.m ..................................... pass    9/9   
+  miscellaneous/news.m ........................................... pass    3/3   
+  miscellaneous/nthargout.m ...................................... pass    2/2   
+  miscellaneous/open.m ........................................... pass    3/3   
+  miscellaneous/orderfields.m .................................... pass   15/15  
+  miscellaneous/pack.m ........................................... pass    1/1   
+  miscellaneous/parseparams.m .................................... pass    8/8   
+  miscellaneous/perl.m ........................................... pass    1/1   
+  miscellaneous/publish.m ........................................ pass    5/5   
+  miscellaneous/python.m ......................................... pass    1/1   
+  miscellaneous/recycle.m ........................................ pass    5/5   
+  miscellaneous/run.m ............................................ pass    5/5   
+  miscellaneous/setfield.m ....................................... pass    6/6   
+  miscellaneous/substruct.m ...................................... pass    6/6   
+  miscellaneous/swapbytes.m ...................................... pass    5/5   
+  miscellaneous/symvar.m ......................................... pass    3/3   
+  miscellaneous/tar.m ............................................ pass    6/6   
+  miscellaneous/tempdir.m ........................................ pass    2/2   
+  miscellaneous/unix.m ........................................... pass    3/3   
+  miscellaneous/unpack.m ......................................... pass   10/10  
+  miscellaneous/untar.m .......................................... pass    1/1   
+  miscellaneous/unzip.m .......................................... pass    1/1   
+  miscellaneous/validateattributes.m ............................. pass   84/84  
+  miscellaneous/ver.m ............................................ pass    3/3   
+  miscellaneous/verLessThan.m .................................... pass    9/9   
+  miscellaneous/version.m ........................................ pass   11/11  
+  miscellaneous/what.m ........................................... pass    2/2   
+  miscellaneous/zip.m ............................................ pass    6/6   
+  ode/decic.m .................................................... pass   17/17  
+  ode/ode15i.m ................................................... pass   46/46  
+                                                 (missing feature) SKIP    2
+  ode/ode15s.m ................................................... pass   34/34  
+                                                 (missing feature) SKIP    5
+  ode/ode23.m .................................................... pass   38/38  
+  ode/ode23s.m ................................................... pass   32/32  
+  ode/ode45.m .................................................... pass   41/41  
+  ode/odeget.m ................................................... pass   15/15  
+  ode/odeset.m ................................................... pass    9/9   
+  optimization/__all_opts__.m .................................... pass    1/1   
+  optimization/fminbnd.m ......................................... pass    7/7   
+  optimization/fminsearch.m ...................................... pass   11/11  
+  optimization/fminunc.m ......................................... pass    6/6   
+  optimization/fsolve.m .......................................... pass    8/8   
+  optimization/fzero.m ........................................... pass    4/4   
+  optimization/glpk.m ............................................ pass    9/9   
+  optimization/humps.m ........................................... pass   11/11  
+  optimization/lsqnonneg.m ....................................... pass   10/10  
+  optimization/optimget.m ........................................ pass   12/12  
+  optimization/optimset.m ........................................ pass    9/9   
+  optimization/pqpnonneg.m ....................................... pass   11/11  
+  optimization/qp.m .............................................. pass    1/1   
+  optimization/sqp.m ............................................. pass   17/17  
+  path/import.m .................................................. pass    1/1   
+  path/matlabroot.m .............................................. pass    1/1   
+  path/pathdef.m ................................................. pass    4/4   
+  path/savepath.m ................................................ pass    1/1   
+  plot/appearance/__clabel__.m ................................... pass    1/1   
+  plot/appearance/__getlegenddata__.m ............................ pass    1/1   
+  plot/appearance/annotation.m ................................... pass   18/18  
+  plot/appearance/axis.m ......................................... pass    6/6   
+  plot/appearance/camlookat.m .................................... pass   10/10  
+  plot/appearance/camorbit.m ..................................... pass   11/11  
+  plot/appearance/campos.m ....................................... pass    5/5   
+  plot/appearance/camroll.m ...................................... pass    6/6   
+  plot/appearance/camtarget.m .................................... pass    5/5   
+  plot/appearance/camup.m ........................................ pass    5/5   
+  plot/appearance/camva.m ........................................ pass    5/5   
+  plot/appearance/camzoom.m ...................................... pass    7/7   
+  plot/appearance/caxis.m ........................................ pass    3/3   
+  plot/appearance/datetick.m ..................................... pass    1/1   
+  plot/appearance/grid.m ......................................... pass    2/2   
+  plot/appearance/gtext.m ........................................ pass    1/1   
+  plot/appearance/legend.m ....................................... pass    8/8   
+  plot/appearance/lighting.m ..................................... pass    8/8   
+  plot/appearance/material.m ..................................... pass   16/16  
+  plot/appearance/orient.m ....................................... pass    3/3   
+  plot/appearance/rticks.m ....................................... pass    3/3   
+  plot/appearance/shading.m ...................................... pass    7/7   
+  plot/appearance/text.m ......................................... pass   11/11  
+  plot/appearance/thetaticks.m ................................... pass    3/3   
+  plot/appearance/title.m ........................................ pass    6/6   
+  plot/appearance/view.m ......................................... pass    3/3   
+  plot/appearance/whitebg.m ...................................... pass    3/3   
+  plot/appearance/xlabel.m ....................................... pass    2/2   
+  plot/appearance/xlim.m ......................................... pass    2/2   
+  plot/appearance/xticklabels.m .................................. pass    3/3   
+  plot/appearance/xticks.m ....................................... pass    3/3   
+  plot/appearance/ylabel.m ....................................... pass    2/2   
+  plot/appearance/ylim.m ......................................... pass    2/2   
+  plot/appearance/yticklabels.m .................................. pass    3/3   
+  plot/appearance/yticks.m ....................................... pass    3/3   
+  plot/appearance/zlabel.m ....................................... pass    2/2   
+  plot/appearance/zlim.m ......................................... pass    2/2   
+  plot/appearance/zticklabels.m .................................. pass    3/3   
+  plot/appearance/zticks.m ....................................... pass    3/3   
+  plot/draw/area.m ............................................... pass    8/8   
+  plot/draw/camlight.m ........................................... pass   10/10  
+  plot/draw/colorbar.m ........................................... pass    7/7   
+  plot/draw/compass.m ............................................ pass    5/5   
+  plot/draw/contour.m ............................................ pass    2/2   
+  plot/draw/contourc.m ........................................... pass   11/11  
+  plot/draw/errorbar.m ........................................... pass   11/11  
+  plot/draw/feather.m ............................................ pass    5/5   
+  plot/draw/fplot.m .............................................. pass   13/13  
+  plot/draw/hist.m ............................................... pass   27/27  
+  plot/draw/isocaps.m ............................................ pass   29/29  
+  plot/draw/isocolors.m .......................................... pass    9/9   
+  plot/draw/isonormals.m ......................................... pass   18/18  
+  plot/draw/isosurface.m ......................................... pass   29/30  
+                                                    (reported bug) XFAIL   1
+  plot/draw/light.m .............................................. pass    2/2   
+  plot/draw/lightangle.m ......................................... pass   11/11  
+  plot/draw/line.m ............................................... pass    1/1   
+  plot/draw/loglog.m ............................................. pass    2/2   
+  plot/draw/ostreamtube.m ........................................ pass   11/11  
+  plot/draw/patch.m .............................................. pass    2/2   
+  plot/draw/pie.m ................................................ pass    3/3   
+  plot/draw/pie3.m ............................................... pass    3/3   
+  plot/draw/reducepatch.m ........................................ pass   19/19  
+  plot/draw/reducevolume.m ....................................... pass   22/22  
+  plot/draw/rose.m ............................................... pass    3/3   
+  plot/draw/semilogx.m ........................................... pass    2/2   
+  plot/draw/semilogy.m ........................................... pass    2/2   
+  plot/draw/shrinkfaces.m ........................................ pass   13/13  
+  plot/draw/smooth3.m ............................................ pass   23/23  
+  plot/draw/sombrero.m ........................................... pass    2/2   
+  plot/draw/stairs.m ............................................. pass    9/9   
+  plot/draw/stem.m ............................................... pass   10/10  
+  plot/draw/stem3.m .............................................. pass    9/9   
+  plot/draw/stemleaf.m ........................................... pass   17/17  
+  plot/draw/stream2.m ............................................ pass   20/20  
+  plot/draw/stream3.m ............................................ pass   27/27  
+  plot/draw/streamline.m ......................................... pass    3/3   
+  plot/draw/streamtube.m ......................................... pass   12/12  
+  plot/draw/surface.m ............................................ pass    1/1   
+  plot/draw/surfnorm.m ........................................... pass    9/9   
+  plot/draw/trimesh.m ............................................ pass    7/7   
+  plot/draw/trisurf.m ............................................ pass    8/8   
+  plot/util/__actual_axis_position__.m ........................... pass    1/1   
+  plot/util/__default_plot_options__.m ........................... pass    1/1   
+  plot/util/__gnuplot_drawnow__.m ................................ pass    1/1   
+  plot/util/__next_line_color__.m ................................ pass    1/1   
+  plot/util/__next_line_style__.m ................................ pass    1/1   
+  plot/util/__opengl_info__.m .................................... pass    1/1   
+  plot/util/__plt_get_axis_arg__.m ............................... pass    1/1   
+  plot/util/__pltopt__.m ......................................... pass    8/8   
+  plot/util/allchild.m ........................................... pass    3/3   
+  plot/util/ancestor.m ........................................... pass    7/7   
+  plot/util/axes.m ............................................... pass    3/3   
+  plot/util/cla.m ................................................ pass    2/2   
+  plot/util/clf.m ................................................ pass    3/3   
+  plot/util/close.m .............................................. pass    9/9   
+  plot/util/closereq.m ........................................... pass    1/1   
+  plot/util/colstyle.m ........................................... pass    6/6   
+  plot/util/copyobj.m ............................................ pass    2/2   
+  plot/util/figure.m ............................................. pass    3/3   
+  plot/util/findall.m ............................................ pass    1/1   
+  plot/util/findobj.m ............................................ pass   10/10  
+  plot/util/gca.m ................................................ pass    1/1   
+  plot/util/gcbf.m ............................................... pass    1/1   
+  plot/util/gcbo.m ............................................... pass    1/1   
+  plot/util/gcf.m ................................................ pass    1/1   
+  plot/util/ginput.m ............................................. pass    1/1   
+  plot/util/gnuplot_binary.in.m .................................. pass    1/1   
+  plot/util/gnuplot_binary.m ..................................... pass    1/1   
+  plot/util/graphics_toolkit.m ................................... pass    2/2   
+  plot/util/groot.m .............................................. pass    2/2   
+  plot/util/hggroup.m ............................................ pass    1/1   
+  plot/util/hgload.m ............................................. pass    6/6   
+  plot/util/hgsave.m ............................................. pass    6/6   
+  plot/util/hold.m ............................................... pass    2/2   
+  plot/util/isaxes.m ............................................. pass    4/4   
+  plot/util/isfigure.m ........................................... pass    4/4   
+  plot/util/isgraphics.m ......................................... pass    6/6   
+  plot/util/ishandle.m ........................................... pass    5/5   
+  plot/util/ishold.m ............................................. pass    1/1   
+  plot/util/isprop.m ............................................. pass    8/8   
+  plot/util/linkaxes.m ........................................... pass    4/4   
+  plot/util/linkprop.m ........................................... pass    7/7   
+  plot/util/meshgrid.m ........................................... pass    9/9   
+  plot/util/ndgrid.m ............................................. pass    9/9   
+  plot/util/newplot.m ............................................ pass    2/2   
+  plot/util/openfig.m ............................................ pass    6/6   
+  plot/util/printd.m ............................................. pass    1/1   
+  plot/util/rotate.m ............................................. pass   11/11  
+  plot/util/saveas.m ............................................. pass    6/6   
+  plot/util/savefig.m ............................................ pass    7/7   
+  plot/util/subplot.m ............................................ pass    3/3   
+  polynomial/compan.m ............................................ pass    6/6   
+  polynomial/conv.m .............................................. pass   22/22  
+  polynomial/deconv.m ............................................ pass   14/14  
+  polynomial/mkpp.m .............................................. pass   16/16  
+  polynomial/mpoles.m ............................................ pass    1/1   
+  polynomial/padecoef.m .......................................... pass   14/14  
+  polynomial/pchip.m ............................................. pass   23/23  
+  polynomial/poly.m .............................................. pass    8/8   
+  polynomial/polyaffine.m ........................................ pass    1/1   
+  polynomial/polyder.m ........................................... pass    5/5   
+  polynomial/polyeig.m ........................................... pass    6/6   
+  polynomial/polyfit.m ........................................... pass    9/9   
+  polynomial/polygcd.m ........................................... pass    4/4   
+  polynomial/polyint.m ........................................... pass    4/4   
+  polynomial/polyout.m ........................................... pass    5/5   
+  polynomial/polyreduce.m ........................................ pass    8/8   
+  polynomial/polyval.m ........................................... pass   29/29  
+  polynomial/polyvalm.m .......................................... pass    3/3   
+  polynomial/ppder.m ............................................. pass   11/11  
+  polynomial/ppint.m ............................................. pass    2/2   
+  polynomial/ppjumps.m ........................................... pass    3/3   
+  polynomial/ppval.m ............................................. pass   17/17  
+  polynomial/residue.m ........................................... pass    7/7   
+  polynomial/roots.m ............................................. pass   12/12  
+  polynomial/spline.m ............................................ pass   27/27  
+  polynomial/splinefit.m ......................................... pass    3/3   
+  polynomial/unmkpp.m ............................................ pass    6/6   
+  prefs/addpref.m ................................................ pass    7/7   
+  prefs/getpref.m ................................................ pass    4/4   
+  prefs/ispref.m ................................................. pass    5/5   
+  prefs/preferences.m ............................................ pass    1/1   
+  prefs/rmpref.m ................................................. pass    5/5   
+  prefs/setpref.m ................................................ pass    7/7   
+  profiler/profexport.m .......................................... pass    5/5   
+  profiler/profile.m ............................................. pass    4/4   
+  profiler/profshow.m ............................................ pass    4/4   
+  set/intersect.m ................................................ pass   29/29  
+  set/ismember.m ................................................. pass   43/43  
+  set/powerset.m ................................................. pass    9/9   
+  set/setdiff.m .................................................. pass   24/24  
+  set/setxor.m ................................................... pass   24/24  
+  set/union.m .................................................... pass   47/47  
+  set/unique.m ................................................... pass   52/52  
+  signal/__parse_movargs__.m ..................................... pass    3/3   
+  signal/autoreg_matrix.m ........................................ pass    4/4   
+  signal/bartlett.m .............................................. pass    9/9   
+  signal/blackman.m .............................................. pass   13/13  
+  signal/detrend.m ............................................... pass   11/11  
+  signal/fftconv.m ............................................... pass    8/8   
+  signal/fftfilt.m ............................................... pass   10/10  
+  signal/fftshift.m .............................................. pass   13/13  
+  signal/freqz.m ................................................. pass    3/3   
+  signal/hamming.m ............................................... pass   13/13  
+  signal/hanning.m ............................................... pass   13/13  
+  signal/ifftshift.m ............................................. pass   13/13  
+  signal/movfun.m ................................................ pass   35/35  
+  signal/movslice.m .............................................. pass   13/13  
+  signal/periodogram.m ........................................... pass    8/8   
+  signal/sinc.m .................................................. pass    4/4   
+  signal/sinetone.m .............................................. pass    1/1   
+  signal/sinewave.m .............................................. pass    8/8   
+  signal/spectral_adf.m .......................................... pass    4/4   
+  signal/spectral_xdf.m .......................................... pass    4/4   
+  signal/unwrap.m ................................................ pass   24/24  
+  sparse/bicg.m .................................................. pass   13/13  
+  sparse/bicgstab.m .............................................. pass   12/12  
+  sparse/cgs.m ................................................... pass   11/11  
+  sparse/colperm.m ............................................... pass    1/1   
+  sparse/eigs.m .................................................. pass  190/190 
+  sparse/gmres.m ................................................. pass   16/16  
+  sparse/gplot.m ................................................. pass    1/1   
+  sparse/ichol.m ................................................. pass   24/24  
+  sparse/ilu.m ................................................... pass   53/53  
+  sparse/nonzeros.m .............................................. pass    6/6   
+  sparse/pcg.m ................................................... pass   17/17  
+  sparse/pcr.m ................................................... pass    3/3   
+  sparse/qmr.m ................................................... pass    4/4   
+  sparse/spaugment.m ............................................. pass    1/1   
+  sparse/spconvert.m ............................................. pass    7/7   
+  sparse/spdiags.m ............................................... pass    9/9   
+  sparse/speye.m ................................................. pass    5/5   
+  sparse/spfun.m ................................................. pass    4/4   
+  sparse/spones.m ................................................ pass    3/3   
+  sparse/sprand.m ................................................ pass   22/22  
+  sparse/sprandn.m ............................................... pass   22/22  
+  sparse/sprandsym.m ............................................. pass   10/10  
+  sparse/spstats.m ............................................... pass    1/1   
+  sparse/spy.m ................................................... pass    1/1   
+  sparse/svds.m .................................................. pass    7/7   
+  sparse/tfqmr.m ................................................. pass   11/11  
+  sparse/treelayout.m ............................................ pass    3/3   
+  specfun/beta.m ................................................. pass   12/12  
+  specfun/betainc.m .............................................. pass   28/28  
+  specfun/betaincinv.m ........................................... pass   27/27  
+  specfun/betaln.m ............................................... pass    9/9   
+  specfun/cosint.m ............................................... pass   29/29  
+  specfun/ellipke.m .............................................. pass    9/9   
+  specfun/expint.m ............................................... pass   19/19  
+  specfun/factor.m ............................................... pass   11/11  
+  specfun/factorial.m ............................................ pass    9/9   
+  specfun/gammainc.m ............................................. pass   88/89  
+                                                    (reported bug) XFAIL   1
+  specfun/gammaincinv.m .......................................... pass   24/24  
+  specfun/isprime.m .............................................. pass   15/15  
+  specfun/lcm.m .................................................. pass    5/5   
+  specfun/legendre.m ............................................. pass   19/19  
+  specfun/nchoosek.m ............................................. pass   17/17  
+  specfun/nthroot.m .............................................. pass   14/14  
+  specfun/perms.m ................................................ pass   30/30  
+  specfun/pow2.m ................................................. pass    4/4   
+  specfun/primes.m ............................................... pass    8/8   
+  specfun/reallog.m .............................................. pass    6/6   
+  specfun/realpow.m .............................................. pass    8/8   
+  specfun/realsqrt.m ............................................. pass    5/5   
+  specfun/sinint.m ............................................... pass   23/23  
+  special-matrix/gallery.m ....................................... pass  120/120 
+  special-matrix/hadamard.m ...................................... pass    6/6   
+  special-matrix/hankel.m ........................................ pass   11/11  
+  special-matrix/hilb.m .......................................... pass    5/5   
+  special-matrix/invhilb.m ....................................... pass    7/7   
+  special-matrix/magic.m ......................................... pass    8/8   
+  special-matrix/pascal.m ........................................ pass   12/12  
+  special-matrix/rosser.m ........................................ pass    3/3   
+  special-matrix/toeplitz.m ...................................... pass    8/8   
+  special-matrix/vander.m ........................................ pass   10/10  
+  special-matrix/wilkinson.m ..................................... pass   10/10  
+  statistics/bounds.m ............................................ pass   13/13  
+  statistics/center.m ............................................ pass   14/14  
+  statistics/corr.m .............................................. pass   10/10  
+  statistics/corrcoef.m .......................................... pass   20/20  
+  statistics/cov.m ............................................... pass   14/14  
+  statistics/discrete_cdf.m ...................................... pass   14/14  
+  statistics/discrete_inv.m ...................................... pass   13/13  
+  statistics/discrete_pdf.m ...................................... pass   14/14  
+  statistics/discrete_rnd.m ...................................... pass   17/17  
+  statistics/empirical_cdf.m ..................................... pass    9/9   
+  statistics/empirical_inv.m ..................................... pass    8/8   
+  statistics/empirical_pdf.m ..................................... pass    8/8   
+  statistics/empirical_rnd.m ..................................... pass    8/8   
+  statistics/histc.m ............................................. pass    8/8   
+  statistics/iqr.m ............................................... pass    8/8   
+  statistics/kendall.m ........................................... pass   10/10  
+  statistics/kurtosis.m .......................................... pass   18/18  
+  statistics/mad.m ............................................... pass   17/17  
+  statistics/mean.m .............................................. pass   20/20  
+  statistics/meansq.m ............................................ pass   11/11  
+  statistics/median.m ............................................ pass   18/18  
+  statistics/mode.m .............................................. pass   21/21  
+  statistics/moment.m ............................................ pass   18/18  
+  statistics/movmad.m ............................................ pass    3/3   
+  statistics/movmax.m ............................................ pass    3/3   
+  statistics/movmean.m ........................................... pass    3/3   
+  statistics/movmedian.m ......................................... pass    3/3   
+  statistics/movmin.m ............................................ pass    3/3   
+  statistics/movprod.m ........................................... pass    3/3   
+  statistics/movstd.m ............................................ pass    4/4   
+  statistics/movsum.m ............................................ pass    3/3   
+  statistics/movvar.m ............................................ pass    4/4   
+  statistics/prctile.m ........................................... pass   14/14  
+  statistics/quantile.m .......................................... pass   26/26  
+  statistics/range.m ............................................. pass    7/7   
+  statistics/ranks.m ............................................. pass   18/18  
+  statistics/run_count.m ......................................... pass   15/15  
+  statistics/runlength.m ......................................... pass    7/7   
+  statistics/skewness.m .......................................... pass   21/21  
+  statistics/spearman.m .......................................... pass    9/9   
+  statistics/statistics.m ........................................ pass    9/9   
+  statistics/std.m ............................................... pass   16/16  
+  statistics/var.m ............................................... pass   16/16  
+  statistics/zscore.m ............................................ pass   14/14  
+  strings/base2dec.m ............................................. pass   14/14  
+  strings/bin2dec.m .............................................. pass    9/9   
+  strings/blanks.m ............................................... pass    8/8   
+  strings/cstrcat.m .............................................. pass    6/6   
+  strings/deblank.m .............................................. pass   15/15  
+  strings/dec2base.m ............................................. pass   22/22  
+  strings/dec2bin.m .............................................. pass    5/5   
+  strings/dec2hex.m .............................................. pass    5/5   
+  strings/erase.m ................................................ pass   30/30  
+  strings/hex2dec.m .............................................. pass    7/7   
+  strings/index.m ................................................ pass   18/18  
+  strings/isletter.m ............................................. pass    2/2   
+  strings/isstring.m ............................................. pass    7/7   
+  strings/isstrprop.m ............................................ pass   10/10  
+  strings/mat2str.m .............................................. pass   16/16  
+  strings/native2unicode.m ....................................... pass   10/10  
+  strings/ostrsplit.m ............................................ pass   12/12  
+  strings/regexptranslate.m ...................................... pass    7/7   
+  strings/rindex.m ............................................... pass    6/6   
+  strings/str2num.m .............................................. pass    6/6   
+  strings/strcat.m ............................................... pass   19/19  
+  strings/strchr.m ............................................... pass    7/7   
+  strings/strjoin.m .............................................. pass    7/7   
+  strings/strjust.m .............................................. pass    8/8   
+  strings/strsplit.m ............................................. pass   41/41  
+  strings/strtok.m ............................................... pass   32/32  
+  strings/strtrim.m .............................................. pass   10/10  
+  strings/strtrunc.m ............................................. pass   13/13  
+  strings/substr.m ............................................... pass   16/16  
+  strings/unicode2native.m ....................................... pass    8/8   
+  strings/untabify.m ............................................. pass    8/8   
+  strings/validatestring.m ....................................... pass   18/18  
+  testfun/__have_feature__.m ..................................... pass    4/4   
+  testfun/__printf_assert__.m .................................... pass    1/1   
+  testfun/__prog_output_assert__.m ............................... pass    1/1   
+  testfun/__run_test_suite__.m ................................... pass    1/1   
+  testfun/assert.m ............................................... pass   96/96  
+  testfun/demo.m ................................................. pass    7/7   
+  testfun/example.m .............................................. pass    9/9   
+  testfun/fail.m ................................................. pass   12/12  
+  testfun/oruntests.m ............................................ pass    2/2   
+  testfun/rundemos.m ............................................. pass    2/2   
+  testfun/speed.m ................................................ pass    4/4   
+  testfun/test.m ................................................. pass   57/58  
+                                                 (missing feature) SKIP    1
+                                                    (reported bug) XFAIL   1
+  time/addtodate.m ............................................... pass   36/36  
+  time/asctime.m ................................................. pass    4/4   
+  time/calendar.m ................................................ pass    3/3   
+  time/clock.m ................................................... pass    1/1   
+  time/ctime.m ................................................... pass    4/4   
+  time/date.m .................................................... pass    2/2   
+  time/datenum.m ................................................. pass   32/32  
+  time/datestr.m ................................................. pass   40/40  
+  time/datevec.m ................................................. pass   29/29  
+  time/eomday.m .................................................. pass   14/14  
+  time/etime.m ................................................... pass    9/9   
+  time/is_leap_year.m ............................................ pass    6/6   
+  time/now.m ..................................................... pass    4/4   
+  time/weekday.m ................................................. pass   20/20  
+  web/web.m ...................................................... pass    3/3   
+  web/webread.m .................................................. pass    5/5   
+  web/webwrite.m ................................................. pass    8/8   
+
+Fixed test scripts:
+
+  bug-35448/bug-35448.tst ........................................ pass    2/2   
+  bug-35881/bug-35881.tst ........................................ pass    1/1   
+  bug-36025/bug-36025.tst ........................................ pass    1/1   
+  bug-38236/bug-38236.tst ........................................ pass    1/1   
+  bug-38691/bug-38691.tst ........................................ pass    1/1   
+  bug-41723/bug-41723.tst ........................................ pass    1/1   
+  bug-44940/bug-44940.tst ........................................ pass    1/1   
+  bug-45351/bug-45351.tst ........................................ pass    9/9   
+  bug-46660/bug-46660.tst ........................................ pass    1/1   
+  bug-47680/bug-47680.tst ........................................ pass    4/4   
+  bug-49379/bug-49379.tst ........................................ pass    0/1   
+                                                    (reported bug) XFAIL   1
+  bug-50014/bug-50014.tst ........................................ pass   11/11  
+  bug-50035/bug-50035.tst ........................................ pass    1/1   
+  bug-50716/bug-50716.tst ........................................ pass    3/3   
+  bug-50831/bug-50831.tst ........................................ pass    1/1   
+  bug-51192/bug-51192.tst ........................................ pass    1/1   
+  bug-51532/bug-51532.tst ........................................ pass    1/1   
+  bug-51534/bug-51534.tst ........................................ pass    1/1   
+  bug-51599/bug-51599.tst ........................................ pass    1/1   
+  bug-52075/bug-52075.tst ........................................ pass    1/1   
+  bug-52722/bug-52722.tst ........................................ pass    1/1   
+  bug-52851/bug-52851.tst ........................................ pass    4/4   
+  bug-53027/bug-53027.tst ........................................ pass    5/5   
+  bug-53468/bug-53468.tst ........................................ pass    3/3   
+  bug-53956/bug-53956.tst ........................................ pass    1/1   
+  bug-54995/bug-54995.tst ........................................ pass    1/1   
+  bug-55758/bug-55758.tst ........................................ pass    1/1   
+  bug-58572/bug-58572.tst ........................................ pass    1/1   
+  bug-58593/bug-58593.tst ........................................ pass    7/7   
+  bug-59451/bug-59451.tst ........................................ pass    1/1   
+  bug-59617/bug-59617.tst ........................................ pass    1/1   
+  bug-59661/bug-59661.tst ........................................ pass    1/1   
+  bug-59704/bug-59704.tst ........................................ pass    2/2   
+  bug-59937/bug-59937.tst ........................................ pass    1/1   
+  class-concat/class-concat.tst .................................. pass    2/2   
+  classdef/classdef.tst .......................................... pass   33/36  
+                                                    (reported bug) XFAIL   3
+  classdef-multiple-inheritance/classdef-multiple-inheritance.tst  pass    1/1   
+  classes/classes.tst ............................................ pass  163/163 
+  ctor-vs-method/ctor-vs-method.tst .............................. pass    4/4   
+  fcn-handle/bug-51567.tst ....................................... pass    0/2   
+                                                    (reported bug) XFAIL   2
+  fcn-handle/bug-57941.tst ....................................... pass    2/2   
+  fcn-handle/bug58519.tst ........................................ pass    1/1   
+  fcn-handle/derived-resolution.tst .............................. pass    7/7   
+  fcn-handle/keyword.tst ......................................... pass    2/2   
+  fcn-handle/object-method.tst ................................... pass    4/4   
+  fcn-handle/package-function.tst ................................ pass    4/4   
+  fcn-handle/shared-ctx.tst ...................................... pass    1/1   
+  fcn-handle/static-method.tst ................................... pass    4/4   
+  local-functions/local_functions.tst ............................ pass    1/1   
+  mex/bug-51725.tst .............................................. pass    2/2   
+  mex/bug-54096.tst .............................................. pass    1/1   
+  nest/nest.tst .................................................. pass   26/26  
+  pkg/pkg.tst .................................................... pass   11/11  
+  private-functions/private-functions.tst ........................ pass    1/1   
+  publish/publish.tst ............................................ pass    2/2   
+  args.tst ....................................................... pass   27/27  
+  bc-overloads.tst ............................................... pass  451/451 
+  bug-31371.tst .................................................. pass    1/1   
+  bug-45969.tst .................................................. pass    2/2   
+  bug-45972.tst .................................................. pass    2/2   
+  bug-46330.tst .................................................. pass    1/1   
+  bug-49904.tst .................................................. pass    2/2   
+  bug-53579.tst .................................................. pass    1/1   
+  bug-53599.tst .................................................. pass    1/1   
+  bug-54490.tst .................................................. pass    1/1   
+  bug-55308.tst .................................................. pass    1/1   
+  bug-55321.tst .................................................. pass    1/1   
+  bug-55322.tst .................................................. pass    1/1   
+  colormaps.tst .................................................. pass    1/1   
+  command.tst .................................................... pass   42/42  
+  complex.tst .................................................... pass    7/7   
+  conv.tst ....................................................... pass  405/405 
+  deprecate-props.tst ............................................ pass    1/1   
+  diag-perm.tst .................................................. pass   31/31  
+  error.tst ...................................................... pass   11/11  
+  eval-catch.tst ................................................. pass    9/9   
+  eval-command.tst ............................................... pass   16/16  
+  for.tst ........................................................ pass   18/18  
+  func.tst ....................................................... pass   51/51  
+  global.tst ..................................................... pass   15/15  
+  if.tst ......................................................... pass   15/15  
+  index.tst ...................................................... pass  180/180 
+  inline-fcn.tst ................................................. pass   18/18  
+  integer.tst .................................................... pass    2/2   
+  io.tst ......................................................... pass  159/159 
+  jit.tst ........................................................ pass    2/2   
+                                                 (missing feature) SKIP   36
+  leftdiv.tst .................................................... pass    6/6   
+  line-continue.tst .............................................. pass   11/11  
+  logical-index.tst .............................................. pass   43/43  
+  null-assign.tst ................................................ pass   21/21  
+  parser.tst ..................................................... pass   53/53  
+  prefer.tst ..................................................... pass   27/27  
+  range.tst ...................................................... pass   82/82  
+  recursion.tst .................................................. pass    4/4   
+  return.tst ..................................................... pass    2/2   
+  single-index.tst ............................................... pass  192/192 
+  slice.tst ...................................................... pass  133/133 
+  sparse.tst ..................................................... pass 1204/1204
+  struct.tst ..................................................... pass   48/48  
+  switch.tst ..................................................... pass    8/8   
+  system.tst ..................................................... pass  103/103 
+  transpose.tst .................................................. pass   16/16  
+  try.tst ........................................................ pass   18/18  
+  unwind.tst ..................................................... pass    2/2   
+  while.tst ...................................................... pass    6/6   
+
+Summary:
+
+  PASS                            16125
+  FAIL                                0
+  XFAIL (reported bug)               27
+  SKIP (missing feature)             44
+  SKIP (run-time condition)          14
+
+See the file /home/wruslan/opt/octave-6.2.0/test/fntests.log for additional details.
+
+XFAIL items are known bugs or expected failures.
+Bug report numbers may be found in the log file:
+/home/wruslan/opt/octave-6.2.0/test/fntests.log
+Please help improve Octave by contributing fixes for them.
+
+Tests are often skipped because required features were
+disabled or were not present when Octave was built.
+The configure script should have printed a summary
+indicating which dependencies were not found.
+
+164 (of 874) .m files have no tests.
+
+Please help improve Octave by contributing tests for these files
+(see the list in the file /home/wruslan/opt/octave-6.2.0/test/fntests.log).
+
+make[3]: Leaving directory '/home/wruslan/opt/octave-6.2.0'
+make[2]: Leaving directory '/home/wruslan/opt/octave-6.2.0'
+make[1]: Leaving directory '/home/wruslan/opt/octave-6.2.0'
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/opt/octave-6.2.0$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES WRY.
+===========================================================
+
